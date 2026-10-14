@@ -1,0 +1,560 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="web_standard" name="shell-type" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+	<style>
+		@layer base {
+
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				overscroll-behavior: none;
+			}
+
+			main> :first-child {
+				margin-top: 0 !important;
+			}
+
+			main> :last-child {
+				margin-bottom: 0 !important;
+			}
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+	</style>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script id="tailwind-config">
+		tailwind.config = {
+			darkMode: "class",
+			theme: {
+				extend: {
+					colors: {
+						border: "#DEDED8",
+						"surface-container": "#eeeeec",
+						"surface-tint": "#5f5e5e",
+						"on-tertiary-fixed": "#1b1c17",
+						"on-tertiary": "#ffffff",
+						tertiary: "#000000",
+						"on-error-container": "#93000a",
+						"on-secondary-fixed": "#062013",
+						"on-secondary": "#ffffff",
+						error: "#ba1a1a",
+						background: "#f9f9f7",
+						"on-primary-fixed": "#1c1b1b",
+						"dark-text": "#FAFAF8",
+						primary: "#000000",
+						"surface-container-high": "#e8e8e6",
+						"secondary-fixed-dim": "#b0ceb9",
+						"primary-container": "#1c1b1b",
+						outline: "#747878",
+						"surface-container-highest": "#e2e3e1",
+						"on-background": "#1a1c1b",
+						"on-primary": "#ffffff",
+						"tertiary-fixed-dim": "#c8c7bf",
+						"on-secondary-container": "#4f6a59",
+						"dark-section": "#191919",
+						secondary: "#496454",
+						"on-surface": "#1a1c1b",
+						"surface-variant": "#e2e3e1",
+						"on-error": "#ffffff",
+						"accent-foreground": "#FFFFFF",
+						"surface-container-lowest": "#ffffff",
+						"on-primary-container": "#858383",
+						"on-surface-variant": "#444748",
+						"inverse-primary": "#c8c6c5",
+						"surface-container-low": "#f4f4f2",
+						"primary-fixed-dim": "#c8c6c5",
+						"on-secondary-fixed-variant": "#324c3d",
+						"on-tertiary-fixed-variant": "#474742",
+						"surface-bright": "#f9f9f7",
+						"inverse-on-surface": "#f1f1ef",
+						"tertiary-container": "#1b1c17",
+						"surface-dim": "#dadad8",
+						"secondary-container": "#ccead4",
+						"primary-fixed": "#e5e2e1",
+						"on-primary-fixed-variant": "#474746",
+						surface: "#F0F0EC",
+						"tertiary-fixed": "#e4e3db",
+						"outline-variant": "#c4c7c7",
+						"error-container": "#ffdad6",
+						"inverse-surface": "#2f3130",
+						"secondary-fixed": "#ccead4",
+						"on-tertiary-container": "#84847e",
+					},
+					borderRadius: {
+						DEFAULT: "0.125rem",
+						lg: "0.25rem",
+						xl: "0.5rem",
+						full: "0.75rem",
+					},
+					spacing: {
+						"margin-tablet": "2rem",
+						gutter: "2rem",
+						"space-sm": "0.5rem",
+						"margin-mobile": "1.25rem",
+						"space-3xl": "7rem",
+						"space-md": "1rem",
+						"gutter-mobile": "1rem",
+						"space-lg": "1.5rem",
+						margin: "4rem",
+						"space-xl": "2.5rem",
+						"space-xs": "0.25rem",
+						"space-2xl": "4rem",
+					},
+					fontFamily: {
+						eyebrow: ["Geist"],
+						"headline-md-mobile": ["Geist"],
+						"display-hero": ["Geist"],
+						"headline-lg": ["Geist"],
+						"label-mono-sm": ["Geist"],
+						"body-lg": ["Geist"],
+						"display-hero-mobile": ["Geist"],
+						"body-md": ["Geist"],
+						"headline-sm": ["Geist"],
+						"body-sm": ["Geist"],
+						"headline-lg-mobile": ["Geist"],
+						"headline-md": ["Geist"],
+					},
+					fontSize: {
+						eyebrow: [
+							"11px",
+							{
+								lineHeight: "14px",
+								letterSpacing: "0.08em",
+								fontWeight: "600",
+							},
+						],
+						"headline-md-mobile": [
+							"26px",
+							{
+								lineHeight: "32px",
+								letterSpacing: "-0.01em",
+								fontWeight: "500",
+							},
+						],
+						"display-hero": [
+							"72px",
+							{
+								lineHeight: "76px",
+								letterSpacing: "-0.03em",
+								fontWeight: "500",
+							},
+						],
+						"headline-lg": [
+							"48px",
+							{
+								lineHeight: "52px",
+								letterSpacing: "-0.02em",
+								fontWeight: "500",
+							},
+						],
+						"label-mono-sm": [
+							"12px",
+							{
+								lineHeight: "16px",
+								letterSpacing: "0.06em",
+								fontWeight: "500",
+							},
+						],
+						"body-lg": [
+							"18px",
+							{
+								lineHeight: "28px",
+								letterSpacing: "-0.005em",
+								fontWeight: "400",
+							},
+						],
+						"display-hero-mobile": [
+							"42px",
+							{
+								lineHeight: "46px",
+								letterSpacing: "-0.025em",
+								fontWeight: "500",
+							},
+						],
+						"body-md": [
+							"16px",
+							{ lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" },
+						],
+						"headline-sm": [
+							"22px",
+							{
+								lineHeight: "28px",
+								letterSpacing: "-0.01em",
+								fontWeight: "500",
+							},
+						],
+						"body-sm": [
+							"14px",
+							{ lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+						],
+						"headline-lg-mobile": [
+							"34px",
+							{
+								lineHeight: "38px",
+								letterSpacing: "-0.015em",
+								fontWeight: "500",
+							},
+						],
+						"headline-md": [
+							"32px",
+							{
+								lineHeight: "38px",
+								letterSpacing: "-0.015em",
+								fontWeight: "500",
+							},
+						],
+					},
+				},
+			},
+		};
+	</script>
+	<link rel="stylesheet" href="site.css" />
+</head>
+
+<body
+	class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+	<header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+		<div
+			class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between">
+			<div class="flex items-center gap-space-md">
+				<a class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-primary"
+					data-path="home" href="home.html"><img src="images/logo.png" alt="Progressive"
+						class="h-6 md:h-7 w-auto object-contain" /></a>
+			</div>
+			<div class="hidden md:flex items-center gap-space-lg">
+				<nav class="flex items-center gap-space-lg"
+					data-active-classes="text-primary font-medium underline underline-offset-4 decoration-1">
+					<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+						data-path="home" href="home.html">Home</a><a
+						class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+						data-path="capabilities" href="capabilities.html">Capabilities</a><a
+						class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+						data-path="our-team" href="our_team.html">Our Team</a><a aria-current="page"
+						class="transition-colors duration-150 text-primary font-medium underline underline-offset-4 decoration-1"
+						data-path="contact" href="contact.html">Contact</a>
+				</nav>
+				<div class="h-4 w-[1px] bg-border"></div>
+				<a class="px-space-md py-space-xs rounded-lg border border-primary text-primary font-body-sm text-body-sm hover:bg-dark-section hover:text-on-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+					data-path="contact" href="contact.html">Start a Conversation</a>
+			</div>
+			<div class="flex md:hidden items-center gap-space-sm">
+				<button aria-expanded="false" aria-label="Toggle Navigation Menu"
+					class="p-space-xs text-on-surface hover:text-primary focus:outline-none" id="mobile-nav-toggle"
+					type="button">
+					<span class="material-symbols-outlined text-[24px]">menu</span>
+				</button>
+			</div>
+		</div>
+		<div class="hidden md:hidden border-b border-border bg-background px-margin-mobile py-space-lg"
+			id="mobile-nav-drawer">
+			<nav class="flex flex-col gap-space-md"
+				data-active-classes="text-primary font-medium underline underline-offset-4">
+				<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+					data-path="home" href="home.html">Home</a><a
+					class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+					data-path="capabilities" href="capabilities.html">Capabilities</a><a
+					class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+					data-path="our-team" href="our_team.html">Our Team</a><a aria-current="page"
+					class="transition-colors text-primary font-medium underline underline-offset-4" data-path="contact"
+					href="contact.html">Contact</a>
+			</nav>
+			<div class="mt-space-lg pt-space-md border-t border-border">
+				<a class="inline-block w-full text-center px-space-md py-space-sm rounded-lg border border-primary bg-primary text-on-primary font-body-sm text-body-sm hover:bg-dark-section transition-colors"
+					data-path="contact" href="contact.html">Start a Conversation</a>
+			</div>
+		</div>
+	</header>
+	<main class="w-full pt-16 bg-background min-h-screen">
+		<div class="flex flex-col w-full">
+			<section class="w-full pt-space-2xl md:pt-space-3xl pb-space-xl border-b border-border">
+				<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+					<div class="flex flex-col max-w-3xl">
+						<div class="flex items-center gap-space-sm mb-space-md hero-fade delay-1">
+							<span class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant">//
+								START A CONVERSATION</span>
+						</div>
+						<h1
+							class="font-display-hero text-headline-lg-mobile md:text-display-hero text-primary tracking-tight font-medium mb-space-lg leading-[1.08] hero-fade delay-2">
+							Let’s talk about what’s next.
+						</h1>
+						<p
+							class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl hero-fade delay-3">
+							Whether you have an upcoming project, need engineering or design
+							support, or want to explore an exploratory collaboration, we’d
+							love to hear from you.
+						</p>
+					</div>
+				</div>
+			</section>
+			<section class="w-full py-space-2xl md:py-space-3xl reveal-on-scroll">
+				<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+					<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+						<div class="lg:col-span-5 flex flex-col justify-between pr-0 lg:pr-space-xl">
+							<div class="flex flex-col">
+								<span
+									class="font-label-mono-sm text-label-mono-sm text-outline uppercase tracking-wider mb-space-xs">01
+									/ DIRECT COMMUNICATION</span>
+								<h2
+									class="font-headline-md text-headline-md text-primary font-medium tracking-tight mb-space-sm">
+									Email us directly
+								</h2>
+								<p
+									class="font-body-md text-body-md text-on-surface-variant mb-space-md leading-relaxed">
+									We appreciate direct communication without barriers. Skip
+									the queue or send formal scopes straight to our mailbox.
+								</p>
+								<a class="inline-flex items-center gap-space-sm font-headline-sm text-headline-sm text-primary hover:text-secondary transition-colors duration-150 group mb-space-xl"
+									href="mailto:hello@progressive.studio">
+									<span
+										class="underline underline-offset-4 decoration-1 decoration-border group-hover:decoration-secondary">hello@progressive.studio</span>
+									<span
+										class="material-symbols-outlined text-[20px] transition-transform duration-150 group-hover:translate-x-1">arrow_forward</span>
+								</a>
+								<div
+									class="p-space-lg rounded-lg bg-surface-container-low border border-border mb-space-xl">
+									<div class="flex items-start gap-space-sm">
+										<span
+											class="material-symbols-outlined text-secondary text-[20px] mt-0.5">schedule</span>
+										<div class="flex flex-col">
+											<span
+												class="font-eyebrow text-eyebrow uppercase tracking-wider text-primary mb-1">Response
+												Expectation</span>
+											<p
+												class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+												We are a small team and review inquiries personally.
+												You can expect a thoughtful response within 1–2
+												business days.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="flex flex-col gap-space-sm mb-space-xl">
+									<span
+										class="font-eyebrow text-eyebrow uppercase tracking-widest text-outline mb-space-xs">Current
+										Collaboration Topics</span>
+									<ul class="flex flex-col divide-y divide-border">
+										<li
+											class="py-space-sm flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+											<span>Exploring new digital product builds</span>
+											<span class="font-label-mono-sm text-label-mono-sm text-outline">01</span>
+										</li>
+										<li
+											class="py-space-sm flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+											<span>Design system & UI/UX audits</span>
+											<span class="font-label-mono-sm text-label-mono-sm text-outline">02</span>
+										</li>
+										<li
+											class="py-space-sm flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+											<span>Workflow automation & internal tooling</span>
+											<span class="font-label-mono-sm text-label-mono-sm text-outline">03</span>
+										</li>
+										<li
+											class="py-space-sm flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+											<span>General introductions & collaborative ideas</span>
+											<span class="font-label-mono-sm text-label-mono-sm text-outline">04</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="lg:col-span-7 mt-space-xl lg:mt-0">
+							<div
+								class="p-space-lg md:p-space-xl rounded-lg bg-surface-container-lowest border border-border">
+								<div
+									class="flex items-center justify-between mb-space-lg pb-space-sm border-b border-border">
+									<span
+										class="font-label-mono-sm text-label-mono-sm text-outline uppercase tracking-wider">02
+										/ INQUIRY DISPATCH</span>
+									<span class="font-body-sm text-body-sm text-secondary font-medium">* Required
+										parameters</span>
+								</div>
+								<form class="flex flex-col gap-space-lg" id="contact-form" novalidate="">
+									<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+										<div class="flex flex-col gap-space-xs">
+											<label
+												class="font-eyebrow text-eyebrow uppercase tracking-wider text-primary"
+												for="full-name">
+												Full Name <span class="text-secondary">*</span>
+											</label>
+											<input
+												class="w-full bg-background border border-border rounded-lg px-space-md py-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors duration-150"
+												id="full-name" name="name" placeholder="e.g. Elena Rostova" required=""
+												type="text" />
+											<span class="hidden font-label-mono-sm text-label-mono-sm text-error mt-0.5"
+												id="name-error">Please provide your name.</span>
+										</div>
+										<div class="flex flex-col gap-space-xs">
+											<label
+												class="font-eyebrow text-eyebrow uppercase tracking-wider text-primary"
+												for="email-address">
+												Email Address <span class="text-secondary">*</span>
+											</label>
+											<input
+												class="w-full bg-background border border-border rounded-lg px-space-md py-space-sm font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors duration-150"
+												id="email-address" name="email" placeholder="elena@domain.com"
+												required="" type="email" />
+											<span class="hidden font-label-mono-sm text-label-mono-sm text-error mt-0.5"
+												id="email-error">Please enter a valid email address.</span>
+										</div>
+									</div>
+									<div class="flex flex-col gap-space-xs">
+										<label class="font-eyebrow text-eyebrow uppercase tracking-wider text-primary"
+											for="interest-topic">
+											Topic of Interest <span class="text-secondary">*</span>
+										</label>
+										<div class="relative">
+											<select
+												class="w-full bg-background border border-border rounded-lg px-space-md py-space-sm font-body-md text-body-md text-on-surface appearance-none focus:outline-none focus:border-primary transition-colors duration-150 pr-10 cursor-pointer"
+												id="interest-topic" name="topic" required="">
+												<option disabled="" selected="" value="">
+													Select an area of inquiry...
+												</option>
+												<option value="software">
+													Software & Web Development
+												</option>
+												<option value="design">UI/UX & Product Design</option>
+												<option value="automation">
+													Business Systems & Automation
+												</option>
+												<option value="research">
+													Research & Prototyping
+												</option>
+												<option value="general">
+													General Collaboration / Hello
+												</option>
+											</select>
+											<span
+												class="material-symbols-outlined pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">
+												expand_more
+											</span>
+										</div>
+										<span class="hidden font-label-mono-sm text-label-mono-sm text-error mt-0.5"
+											id="topic-error">Please choose a relevant topic.</span>
+									</div>
+									<div class="flex flex-col gap-space-xs">
+										<div class="flex justify-between items-baseline">
+											<label
+												class="font-eyebrow text-eyebrow uppercase tracking-wider text-primary"
+												for="project-notes">
+												Tell us about your idea or project
+												<span class="text-secondary">*</span>
+											</label>
+											<span class="font-label-mono-sm text-label-mono-sm text-outline"
+												id="char-counter">0 / 1000</span>
+										</div>
+										<textarea
+											class="w-full bg-background border border-border rounded-lg p-space-md font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary transition-colors duration-150 resize-y"
+											id="project-notes" maxlength="1000" name="message"
+											placeholder="Share a brief overview of what you are working on, any timelines, and how we might assist..."
+											required="" rows="5"></textarea>
+										<span class="hidden font-label-mono-sm text-label-mono-sm text-error mt-0.5"
+											id="message-error">Please share a brief note or project context.</span>
+									</div>
+									<div
+										class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-end gap-space-md">
+										<button
+											class="px-space-xl py-space-sm rounded-lg bg-dark-section text-dark-text font-body-sm text-body-sm font-medium hover:bg-surface-tint active:bg-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 flex items-center justify-center gap-space-sm"
+											id="submit-btn" type="submit">
+											<span>Send Message</span>
+											<span class="material-symbols-outlined text-[18px]">send</span>
+										</button>
+									</div>
+									<div class="hidden p-space-md rounded-lg border border-secondary bg-secondary-container text-on-secondary-fixed font-body-sm text-body-sm flex items-center gap-space-sm"
+										id="form-feedback">
+										<span class="material-symbols-outlined text-[20px]">check_circle</span>
+										<span>Thank you. Your message has been routed to our team. We
+											will get back to you shortly.</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="w-full py-space-xl border-t border-border bg-surface-container-low reveal-on-scroll">
+				<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+					<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+						<div class="flex items-center gap-space-sm">
+							<span class="material-symbols-outlined text-outline text-[20px]">alternate_email</span>
+							<span class="font-body-sm text-body-sm text-on-surface-variant">
+								Prefer a quick note without a form? Feel free to reach out
+								directly via
+								<a class="text-primary font-medium underline underline-offset-4 decoration-1 hover:text-secondary transition-colors duration-150"
+									href="mailto:hello@progressive.studio">hello@progressive.studio</a>.
+							</span>
+						</div>
+						<span class="font-label-mono-sm text-label-mono-sm text-outline">EST · CET Collaboration
+							Hours</span>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="w-full bg-background border-t border-border pt-space-2xl pb-space-xl">
+		<div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+			<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-2xl">
+				<div class="md:col-span-5 flex flex-col gap-space-sm">
+					<div class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium">
+						Progressive
+					</div>
+					<p class="font-body-sm text-body-sm text-secondary font-medium">
+						Move ideas forward.
+					</p>
+					<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs leading-relaxed">
+						An emerging team exploring technology, design, and practical
+						solutions to real-world problems.
+					</p>
+				</div>
+				<div class="md:col-span-3 md:col-start-8 flex flex-col gap-space-sm">
+					<span
+						class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Navigation</span>
+					<nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-medium">
+						<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+							data-path="home" href="home.html">Home</a><a
+							class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+							data-path="capabilities" href="capabilities.html">Capabilities</a><a
+							class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+							data-path="our-team" href="our_team.html">Our Team</a><a aria-current="page"
+							class="transition-colors duration-150 text-primary font-medium" data-path="contact"
+							href="contact.html">Contact</a>
+					</nav>
+				</div>
+				<div class="md:col-span-2 flex flex-col gap-space-sm">
+					<span
+						class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Practice</span>
+					<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+						Independent studio focusing on software craft, system
+						architecture, and product inquiry.
+					</p>
+				</div>
+			</div>
+			<div
+				class="pt-space-lg border-t border-border flex flex-col sm:flex-row items-baseline justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+				<div>© 2025 Progressive. All rights reserved.</div>
+				<div class="font-label-mono-sm text-label-mono-sm text-outline">
+					Built with quiet precision.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="site.js"></script>
+</body>
+
+</html>

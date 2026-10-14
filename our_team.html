@@ -1,0 +1,733 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            border: "#DEDED8",
+            "surface-container": "#eeeeec",
+            "surface-tint": "#5f5e5e",
+            "on-tertiary-fixed": "#1b1c17",
+            "on-tertiary": "#ffffff",
+            tertiary: "#000000",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#062013",
+            "on-secondary": "#ffffff",
+            error: "#ba1a1a",
+            background: "#f9f9f7",
+            "on-primary-fixed": "#1c1b1b",
+            "dark-text": "#FAFAF8",
+            primary: "#000000",
+            "surface-container-high": "#e8e8e6",
+            "secondary-fixed-dim": "#b0ceb9",
+            "primary-container": "#1c1b1b",
+            outline: "#747878",
+            "surface-container-highest": "#e2e3e1",
+            "on-background": "#1a1c1b",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#c8c7bf",
+            "on-secondary-container": "#4f6a59",
+            "dark-section": "#191919",
+            secondary: "#496454",
+            "on-surface": "#1a1c1b",
+            "surface-variant": "#e2e3e1",
+            "on-error": "#ffffff",
+            "accent-foreground": "#FFFFFF",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#858383",
+            "on-surface-variant": "#444748",
+            "inverse-primary": "#c8c6c5",
+            "surface-container-low": "#f4f4f2",
+            "primary-fixed-dim": "#c8c6c5",
+            "on-secondary-fixed-variant": "#324c3d",
+            "on-tertiary-fixed-variant": "#474742",
+            "surface-bright": "#f9f9f7",
+            "inverse-on-surface": "#f1f1ef",
+            "tertiary-container": "#1b1c17",
+            "surface-dim": "#dadad8",
+            "secondary-container": "#ccead4",
+            "primary-fixed": "#e5e2e1",
+            "on-primary-fixed-variant": "#474746",
+            surface: "#F0F0EC",
+            "tertiary-fixed": "#e4e3db",
+            "outline-variant": "#c4c7c7",
+            "error-container": "#ffdad6",
+            "inverse-surface": "#2f3130",
+            "secondary-fixed": "#ccead4",
+            "on-tertiary-container": "#84847e",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          spacing: {
+            "margin-tablet": "2rem",
+            gutter: "2rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-3xl": "7rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            margin: "4rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "4rem",
+          },
+          fontFamily: {
+            eyebrow: ["Geist"],
+            "headline-md-mobile": ["Geist"],
+            "display-hero": ["Geist"],
+            "headline-lg": ["Geist"],
+            "label-mono-sm": ["Geist"],
+            "body-lg": ["Geist"],
+            "display-hero-mobile": ["Geist"],
+            "body-md": ["Geist"],
+            "headline-sm": ["Geist"],
+            "body-sm": ["Geist"],
+            "headline-lg-mobile": ["Geist"],
+            "headline-md": ["Geist"],
+          },
+          fontSize: {
+            eyebrow: [
+              "11px",
+              {
+                lineHeight: "14px",
+                letterSpacing: "0.08em",
+                fontWeight: "600",
+              },
+            ],
+            "headline-md-mobile": [
+              "26px",
+              {
+                lineHeight: "32px",
+                letterSpacing: "-0.01em",
+                fontWeight: "500",
+              },
+            ],
+            "display-hero": [
+              "72px",
+              {
+                lineHeight: "76px",
+                letterSpacing: "-0.03em",
+                fontWeight: "500",
+              },
+            ],
+            "headline-lg": [
+              "48px",
+              {
+                lineHeight: "52px",
+                letterSpacing: "-0.02em",
+                fontWeight: "500",
+              },
+            ],
+            "label-mono-sm": [
+              "12px",
+              {
+                lineHeight: "16px",
+                letterSpacing: "0.06em",
+                fontWeight: "500",
+              },
+            ],
+            "body-lg": [
+              "18px",
+              {
+                lineHeight: "28px",
+                letterSpacing: "-0.005em",
+                fontWeight: "400",
+              },
+            ],
+            "display-hero-mobile": [
+              "42px",
+              {
+                lineHeight: "46px",
+                letterSpacing: "-0.025em",
+                fontWeight: "500",
+              },
+            ],
+            "body-md": [
+              "16px",
+              { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" },
+            ],
+            "headline-sm": [
+              "22px",
+              {
+                lineHeight: "28px",
+                letterSpacing: "-0.01em",
+                fontWeight: "500",
+              },
+            ],
+            "body-sm": [
+              "14px",
+              { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+            ],
+            "headline-lg-mobile": [
+              "34px",
+              {
+                lineHeight: "38px",
+                letterSpacing: "-0.015em",
+                fontWeight: "500",
+              },
+            ],
+            "headline-md": [
+              "32px",
+              {
+                lineHeight: "38px",
+                letterSpacing: "-0.015em",
+                fontWeight: "500",
+              },
+            ],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="site.css" />
+</head>
+
+<body
+  class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <div
+      class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between">
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-primary"
+          data-path="home" href="home.html"><img src="images/logo.png" alt="Progressive"
+            class="h-6 md:h-7 w-auto object-contain" /></a>
+      </div>
+      <div class="hidden md:flex items-center gap-space-lg">
+        <nav class="flex items-center gap-space-lg"
+          data-active-classes="text-primary font-medium underline underline-offset-4 decoration-1">
+          <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+            data-path="home" href="home.html">Home</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+            data-path="capabilities" href="capabilities.html">Capabilities</a><a aria-current="page"
+            class="transition-colors duration-150 text-primary font-medium underline underline-offset-4 decoration-1"
+            data-path="our-team" href="our_team.html">Our Team</a><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+            data-path="contact" href="contact.html">Contact</a>
+        </nav>
+        <div class="h-4 w-[1px] bg-border"></div>
+        <a class="px-space-md py-space-xs rounded-lg border border-primary text-primary font-body-sm text-body-sm hover:bg-dark-section hover:text-on-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+          data-path="contact" href="contact.html">Start a Conversation</a>
+      </div>
+      <div class="flex md:hidden items-center gap-space-sm">
+        <img alt="Profile" class="w-8 h-8 rounded-full object-cover border border-border"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1UvivRBIdDPA_zlIot6ph-HLbeuCJztR_nhmWGOfLh3drkN4piYPgx2bK2saopctq-7pdAqFDaTATBtMwlk3oIkuEd3Jlp_4k2nDzYnh20XPChODD3mJF8i7EAYAjE8dYfPhAStNoRW3aXvqhNlYXbGnU2tvl1iCDKcWECQdOow68Lf19NjCNYLfFBXKuw1r_VXS1nQ4ckrTxQSB8gseIF3Pg6Ly9N6p9p1-eS8tPAJniBB_nJ-EI5L7ic" /><button
+          aria-controls="mobile-nav-drawer" aria-expanded="false" aria-label="Toggle Navigation Menu"
+          class="p-space-xs text-on-surface hover:text-primary focus:outline-none" id="mobile-nav-toggle" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden border-b border-border bg-background px-margin-mobile py-space-lg"
+      id="mobile-nav-drawer">
+      <nav class="flex flex-col gap-space-md"
+        data-active-classes="text-primary font-medium underline underline-offset-4">
+        <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+          data-path="home" href="home.html">Home</a><a
+          class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+          data-path="capabilities" href="capabilities.html">Capabilities</a><a aria-current="page"
+          class="transition-colors text-primary font-medium underline underline-offset-4" data-path="our-team"
+          href="our_team.html">Our Team</a><a
+          class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+          data-path="contact" href="contact.html">Contact</a>
+      </nav>
+      <div class="mt-space-lg pt-space-md border-t border-border">
+        <a class="inline-block w-full text-center px-space-md py-space-sm rounded-lg border border-primary bg-primary text-on-primary font-body-sm text-body-sm hover:bg-dark-section transition-colors"
+          data-path="contact" href="contact.html">Start a Conversation</a>
+      </div>
+    </div>
+  </header>
+  <main class="w-full pt-16 bg-background min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- Top Editorial Header & Intro -->
+      <section class="w-full pt-space-xl pb-space-2xl border-b border-border">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+            <div class="md:col-span-12 lg:col-span-10 flex flex-col items-start">
+              <div class="hero-fade delay-1 flex items-center gap-space-sm mb-space-md">
+                <span class="font-eyebrow text-eyebrow text-on-surface-variant uppercase tracking-widest">// Our
+                  People</span>
+              </div>
+              <h1
+                class="hero-fade delay-2 font-headline-lg text-headline-lg text-primary tracking-tight font-medium max-w-4xl text-balance">
+                A team moving in the same direction.
+              </h1>
+              <p
+                class="hero-fade delay-3 font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-lg leading-relaxed font-normal">
+                Progressive brings together people interested in building
+                useful things, learning through experimentation, and
+                approaching problems with intention. We are small by design,
+                allowing us to stay close to the work and maintain personal
+                accountability for every line of code and detail of design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Studio Philosophy & Values: 3 Editorial Columns -->
+      <section class="w-full py-space-2xl border-b border-border bg-surface-container-low/40 reveal-on-scroll">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm pb-space-md border-b border-border">
+            <div>
+              <span
+                class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block mb-space-xs">01
+                / Foundation</span>
+              <h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+                Shared Principles
+              </h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+              The operational posture that governs our technical and spatial
+              choices every day.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+            <!-- Principle 01 -->
+            <div class="py-space-lg md:py-0 md:pr-space-xl flex flex-col justify-between h-full">
+              <div>
+                <div class="flex items-center justify-between mb-space-lg">
+                  <span class="font-label-mono-sm text-label-mono-sm text-outline">RULE // 01</span>
+                  <span class="material-symbols-outlined text-outline text-[20px]">architecture</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm font-medium">
+                  Craft with restraint
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  We prioritize clarity, longevity, and substance over
+                  fleeting design trends or technical complexity for its own
+                  sake.
+                </p>
+              </div>
+              <div class="pt-space-xl mt-space-md">
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">AESTHETIC & SYSTEM INTEGRITY</span>
+              </div>
+            </div>
+            <!-- Principle 02 -->
+            <div class="py-space-lg md:py-0 md:px-space-xl flex flex-col justify-between h-full">
+              <div>
+                <div class="flex items-center justify-between mb-space-lg">
+                  <span class="font-label-mono-sm text-label-mono-sm text-outline">RULE // 02</span>
+                  <span class="material-symbols-outlined text-outline text-[20px]">terminal</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm font-medium">
+                  Pragmatic curiosity
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  We continually test new tools and approaches, but adopt only
+                  what demonstrably improves the quality and speed of the
+                  solution.
+                </p>
+              </div>
+              <div class="pt-space-xl mt-space-md">
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">EMPIRICAL TESTING OVER HYPE</span>
+              </div>
+            </div>
+            <!-- Principle 03 -->
+            <div class="py-space-lg md:py-0 md:pl-space-xl flex flex-col justify-between h-full">
+              <div>
+                <div class="flex items-center justify-between mb-space-lg">
+                  <span class="font-label-mono-sm text-label-mono-sm text-outline">RULE // 03</span>
+                  <span class="material-symbols-outlined text-outline text-[20px]">handshake</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm font-medium">
+                  Clear accountability
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                  We believe in direct relationships with collaborators,
+                  transparent communication, and honest expectations.
+                </p>
+              </div>
+              <div class="pt-space-xl mt-space-md">
+                <span class="font-label-mono-sm text-label-mono-sm text-secondary">NO INTERMEDIARIES</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team Roster Section (Anti-Card Editorial Rows) -->
+      <section class="w-full py-space-2xl border-b border-border reveal-on-scroll">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-space-xl">
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider">02 / Active
+                Personnel</span>
+              <h2 class="font-headline-md text-headline-md text-primary tracking-tight">
+                Core Contributors
+              </h2>
+            </div>
+            <div class="font-label-mono-sm text-label-mono-sm text-outline mt-space-xs md:mt-0">
+              STATUS: COMPONENT STUB // ACTIVE REPOSITORIES
+            </div>
+          </div>
+          <!-- Editorial Roster Rows -->
+          <div class="flex flex-col border-t border-border">
+            <!-- Member 01 -->
+            <article class="group py-space-xl border-b border-border transition-colors duration-150 hover:bg-surface">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                <!-- Col 1: Index & Admin Badge -->
+                <div class="md:col-span-2 flex flex-col gap-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-wider">MEMBER /
+                    01</span>
+                  <span
+                    class="inline-block px-1.5 py-0.5 rounded text-[10px] font-label-mono-sm tracking-wide bg-surface-container text-on-surface-variant border border-border w-fit">
+                    [Editable Profile 01]
+                  </span>
+                </div>
+                <!-- Col 2: Image & Monogram Spec -->
+                <div class="md:col-span-3 flex items-start gap-space-md">
+                  <div
+                    class="portrait-container relative w-20 h-20 rounded bg-surface-container-high border border-border overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <img class="w-full h-full object-cover grayscale contrast-125"
+                      data-alt="Editorial black and white studio portrait of a designer with short dark hair in a charcoal mock turtleneck, soft dramatic architectural side lighting, subtle film grain texture, minimalist neutral backdrop."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy8Hi7InxQtKwBV4YqlO3wcS_qhK-AHka6wy9n6ob_VGp6helfysREI9VyndQfu1VGhkiSRi191hgeLDIgMUMHdJW2MyQPnANnaN5dUZCZzZ1vi0atblcJfHcLGBGqacWhGIwJhVTdwuRuew4Tw0wvSNl-adhmCQ7QbwjQ6O5HzVpNHlt23ZOcj0P7OWC1YHhFc_MwiFInJs5bq2GW4vxdegLxFcrm9WwIIpNIugLEzMk7okSzt-Vw" />
+                    <div
+                      class="absolute bottom-1 right-1 px-1 bg-dark-section/80 text-dark-text font-label-mono-sm text-[9px] rounded">
+                      AC-01
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-space-xs">
+                      <h3 class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">
+                        Alex Chen
+                      </h3>
+                    </div>
+                    <span class="font-label-mono-sm text-[10px] text-outline mt-0.5 leading-tight">
+                      [Sample / Placeholder - Replace with actual name]
+                    </span>
+                    <span class="font-body-sm text-body-sm text-secondary font-medium mt-space-xs">
+                      Design & Product Engineering
+                    </span>
+                  </div>
+                </div>
+                <!-- Col 3: Bio -->
+                <div class="md:col-span-4 flex flex-col gap-space-sm mt-space-sm md:mt-0">
+                  <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                    Focuses on design systems, information architecture, and
+                    frontend implementation. Enjoys typography,
+                    micro-interactions, and creating tools that empower
+                    non-technical users.
+                  </p>
+                  <!-- Focus Area Chips -->
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">UI/UX</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Design
+                      Systems</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">TypeScript</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">HTML/CSS</span>
+                  </div>
+                </div>
+                <!-- Col 4: Links & Handshake -->
+                <div
+                  class="md:col-span-3 flex md:flex-col md:items-end justify-between h-full gap-space-md mt-space-sm md:mt-0 pt-space-xs">
+                  <div class="flex items-center gap-space-md">
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://github.com" rel="noopener noreferrer" target="_blank">
+                      GitHub
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                    <span class="text-border">/</span>
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                      LinkedIn
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                  </div>
+                  <span class="font-label-mono-sm text-[11px] text-outline">LOC: PACIFIC (UTC-8)</span>
+                </div>
+              </div>
+            </article>
+            <!-- Member 02 -->
+            <article class="group py-space-xl border-b border-border transition-colors duration-150 hover:bg-surface">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                <!-- Col 1: Index & Admin Badge -->
+                <div class="md:col-span-2 flex flex-col gap-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-wider">MEMBER /
+                    02</span>
+                  <span
+                    class="inline-block px-1.5 py-0.5 rounded text-[10px] font-label-mono-sm tracking-wide bg-surface-container text-on-surface-variant border border-border w-fit">
+                    [Editable Profile 02]
+                  </span>
+                </div>
+                <!-- Col 2: Image & Name -->
+                <div class="md:col-span-3 flex items-start gap-space-md">
+                  <div
+                    class="portrait-container relative w-20 h-20 rounded bg-surface-container-high border border-border overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <img class="w-full h-full object-cover grayscale contrast-125"
+                      data-alt="Intense high contrast black and white portrait of a backend systems architect with round steel spectacles, neutral expression, subtle natural window light from left, raw concrete studio interior, rich shadows."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA24OBJxmcUfrxgHi9B_kCpleIIFHS-hfSAAPIvIyEOjeV7hV6XVP1F5OvwGbTZB5AFmUYz_f9EvdEId9kkhpEJSD-y0ajk0gYpwYExCFwhsbeRosgmBpy_3RGaWHskU8Ud_EVmmcBLAB3bg6MDowYIhOKMZnuMQZ7d3lOB4j6HtqdXFsfEVa4AyiNO8r9T9c9Q6iUmdL-x7Eb9-AFibGAOCJlO83QLdVwIbHTZrySI2S2JALbMp5fV" />
+                    <div
+                      class="absolute bottom-1 right-1 px-1 bg-dark-section/80 text-dark-text font-label-mono-sm text-[9px] rounded">
+                      MT-02
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-space-xs">
+                      <h3 class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">
+                        Morgan Taylor
+                      </h3>
+                    </div>
+                    <span class="font-label-mono-sm text-[10px] text-outline mt-0.5 leading-tight">
+                      [Sample / Placeholder - Replace with actual name]
+                    </span>
+                    <span class="font-body-sm text-body-sm text-secondary font-medium mt-space-xs">
+                      Systems Architecture & Automation
+                    </span>
+                  </div>
+                </div>
+                <!-- Col 3: Bio -->
+                <div class="md:col-span-4 flex flex-col gap-space-sm mt-space-sm md:mt-0">
+                  <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                    Specializes in application backends, API design, and
+                    workflow automation. Passionate about performance, clean
+                    data modeling, and eliminating manual work.
+                  </p>
+                  <!-- Focus Area Chips -->
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Backend
+                      Architecture</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">APIs</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Database
+                      Design</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Workflow
+                      Tooling</span>
+                  </div>
+                </div>
+                <!-- Col 4: Links & Handshake -->
+                <div
+                  class="md:col-span-3 flex md:flex-col md:items-end justify-between h-full gap-space-md mt-space-sm md:mt-0 pt-space-xs">
+                  <div class="flex items-center gap-space-md">
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://github.com" rel="noopener noreferrer" target="_blank">
+                      GitHub
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                    <span class="text-border">/</span>
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                      LinkedIn
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                  </div>
+                  <span class="font-label-mono-sm text-[11px] text-outline">LOC: EASTERN (UTC-5)</span>
+                </div>
+              </div>
+            </article>
+            <!-- Member 03 -->
+            <article class="group py-space-xl border-b border-border transition-colors duration-150 hover:bg-surface">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                <!-- Col 1: Index & Admin Badge -->
+                <div class="md:col-span-2 flex flex-col gap-space-xs">
+                  <span class="font-label-mono-sm text-label-mono-sm text-secondary font-medium tracking-wider">MEMBER /
+                    03</span>
+                  <span
+                    class="inline-block px-1.5 py-0.5 rounded text-[10px] font-label-mono-sm tracking-wide bg-surface-container text-on-surface-variant border border-border w-fit">
+                    [Editable Profile 03]
+                  </span>
+                </div>
+                <!-- Col 2: Image & Name -->
+                <div class="md:col-span-3 flex items-start gap-space-md">
+                  <div
+                    class="portrait-container relative w-20 h-20 rounded bg-surface-container-high border border-border overflow-hidden flex-shrink-0 flex items-center justify-center">
+                    <img class="w-full h-full object-cover grayscale contrast-125"
+                      data-alt="Minimalist editorial black and white headshot of a product strategist looking thoughtfully off-camera, soft daylight diffused through sheer curtain, clean linen collar, sharp focus on eyes, calm contemplative expression."
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdC1jH5MRRAOsHXQVXe_zSAEqk5ZdacDScUUWa4vBXxhy4k3QbC3rr2g5lUneeY0oHcsrWXsIZX2B5lnNJFdVFNT2OTIDyp68h2CT_6Tr-B9Lgu19X7HU-abrpxaUmKOLscfBdQFsvj1Rd4_haPaRV_1nBkulJ_NrLTDk08PhwIeYLVgPzgetbmGqXfk53iju-w-ncouh8Pj_yJO_XbTGM5UXqiEyYA2sMsnEKTPZ_hNaNcKzp-mZM" />
+                    <div
+                      class="absolute bottom-1 right-1 px-1 bg-dark-section/80 text-dark-text font-label-mono-sm text-[9px] rounded">
+                      SP-03
+                    </div>
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-space-xs">
+                      <h3 class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight">
+                        Samira Patel
+                      </h3>
+                    </div>
+                    <span class="font-label-mono-sm text-[10px] text-outline mt-0.5 leading-tight">
+                      [Sample / Placeholder - Replace with actual name]
+                    </span>
+                    <span class="font-body-sm text-body-sm text-secondary font-medium mt-space-xs">
+                      Product Strategy & Research
+                    </span>
+                  </div>
+                </div>
+                <!-- Col 3: Bio -->
+                <div class="md:col-span-4 flex flex-col gap-space-sm mt-space-sm md:mt-0">
+                  <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                    Leads research sprints, user interviews, and product
+                    framing. Dedicated to ensuring technical decisions align
+                    with genuine user needs and business constraints.
+                  </p>
+                  <!-- Focus Area Chips -->
+                  <div class="flex flex-wrap gap-1.5 pt-space-xs">
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">User
+                      Research</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Prototyping</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Product
+                      Discovery</span>
+                    <span
+                      class="px-2 py-0.5 rounded text-label-mono-sm text-[11px] bg-surface-container text-on-surface-variant border border-border">Analytics</span>
+                  </div>
+                </div>
+                <!-- Col 4: Links & Handshake -->
+                <div
+                  class="md:col-span-3 flex md:flex-col md:items-end justify-between h-full gap-space-md mt-space-sm md:mt-0 pt-space-xs">
+                  <div class="flex items-center gap-space-md">
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://github.com" rel="noopener noreferrer" target="_blank">
+                      GitHub
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                    <span class="text-border">/</span>
+                    <a class="font-body-sm text-body-sm text-on-surface underline underline-offset-4 decoration-1 hover:text-secondary transition-colors inline-flex items-center gap-0.5"
+                      href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                      LinkedIn
+                      <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                    </a>
+                  </div>
+                  <span class="font-label-mono-sm text-[11px] text-outline">LOC: CENTRAL (UTC-6)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing Invitation Section (Inverted Dark Surface for Contrast) -->
+      <section class="w-full py-space-3xl bg-dark-section text-dark-text reveal-on-scroll">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+            <div class="md:col-span-8 flex flex-col gap-space-md">
+              <div class="flex items-center gap-space-xs">
+                <span
+                  class="font-eyebrow text-eyebrow uppercase tracking-widest text-secondary-fixed-dim">// Collaborations &
+                  Open Roles</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-dark-text tracking-tight font-medium max-w-xl">
+                Interested in collaborating or joining our journey?
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-primary-container max-w-xl leading-relaxed">
+                We are always keen to meet fellow designers, engineers, and
+                founders who care about doing thoughtful work.
+              </p>
+            </div>
+            <div class="md:col-span-4 flex md:justify-end items-center mt-space-lg md:mt-0">
+              <a class="inline-flex items-center gap-space-sm px-space-lg py-space-md rounded bg-surface-bright text-primary font-body-sm text-body-sm font-medium hover:bg-surface-dim transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-dark-section"
+                data-path="contact" href="contact.html">
+                <span>Connect with Us</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="w-full bg-background border-t border-border pt-space-2xl pb-space-xl">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-2xl">
+        <div class="md:col-span-5 flex flex-col gap-space-sm">
+          <div class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium">
+            Progressive
+          </div>
+          <p class="font-body-sm text-body-sm text-secondary font-medium">
+            Move ideas forward.
+          </p>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs leading-relaxed">
+            An emerging team exploring technology, design, and practical
+            solutions to real-world problems.
+          </p>
+        </div>
+        <div class="md:col-span-3 md:col-start-8 flex flex-col gap-space-sm">
+          <span
+            class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Navigation</span>
+          <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-medium">
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+              data-path="home" href="home.html">Home</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+              data-path="capabilities" href="capabilities.html">Capabilities</a><a aria-current="page"
+              class="transition-colors duration-150 text-primary font-medium" data-path="our-team"
+              href="our_team.html">Our Team</a><a
+              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+              data-path="contact" href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <div class="md:col-span-2 flex flex-col gap-space-sm">
+          <span
+            class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Practice</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Independent studio focusing on software craft, system
+            architecture, and product inquiry.
+          </p>
+        </div>
+      </div>
+      <div
+        class="pt-space-lg border-t border-border flex flex-col sm:flex-row items-baseline justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+        <div>© 2025 Progressive. All rights reserved.</div>
+        <div class="font-label-mono-sm text-label-mono-sm text-outline">
+          Built with quiet precision.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="site.js"></script>
+</body>
+
+</html>

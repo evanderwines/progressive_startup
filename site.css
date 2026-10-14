@@ -1,0 +1,141 @@
+/* ==========================================================================
+   PROGRESSIVE STUDIO — MINIMALIST MOTION & INTERACTION ENHANCEMENTS
+   ========================================================================== */
+
+/* 1. Base & Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Compensate for fixed 4rem (64px) header plus comfortable breathing room */
+[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* 2. Header Scroll Elevation */
+header {
+  transition: background-color 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+header.is-scrolled {
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.035);
+  background-color: rgba(249, 249, 247, 0.98);
+  border-bottom-color: rgba(222, 222, 216, 0.9);
+}
+
+/* 3. Hero Gentle Entrance Animations (Progressive Enhancement) */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 420ms cubic-bezier(0.16, 1, 0.3, 1), transform 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.hero-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 50ms; }
+.delay-2 { transition-delay: 130ms; }
+.delay-3 { transition-delay: 210ms; }
+.delay-4 { transition-delay: 290ms; }
+
+/* 4. Scroll-Triggered Section Reveals */
+/* By default, elements are completely visible so content is never hidden if JS fails */
+.js-active .reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.js-active .reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.js-active .stagger-1 { transition-delay: 40ms; }
+.js-active .stagger-2 { transition-delay: 80ms; }
+.js-active .stagger-3 { transition-delay: 120ms; }
+.js-active .stagger-4 { transition-delay: 160ms; }
+.js-active .stagger-5 { transition-delay: 200ms; }
+
+/* 5. Mobile Navigation Drawer Animation */
+#mobile-nav-drawer {
+  transition: max-height 240ms cubic-bezier(0.16, 1, 0.3, 1), opacity 200ms ease, padding 200ms ease;
+  overflow: hidden;
+}
+
+#mobile-nav-drawer:not(.hidden) {
+  display: block !important;
+  animation: drawerSlideDown 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 6. Refined Interactive Feedback */
+/* Subtle button press */
+button:active:not(:disabled),
+a.interactive-btn:active,
+[role="button"]:active {
+  transform: scale(0.985);
+}
+
+/* Portrait hover refinement */
+.portrait-container {
+  overflow: hidden;
+}
+
+.portrait-container img {
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), filter 350ms ease;
+}
+
+.group:hover .portrait-container img {
+  transform: scale(1.02);
+}
+
+/* Accessible visible focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #496454 !important;
+  outline-offset: 2px !important;
+}
+
+/* 7. Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-fade,
+  .js-active .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  #mobile-nav-drawer:not(.hidden) {
+    animation: none !important;
+    transform: none !important;
+  }
+}
