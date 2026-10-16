@@ -49,57 +49,57 @@
         theme: {
           extend: {
             colors: {
-              border: "#DEDED8",
-              "surface-container": "#eeeeec",
-              "surface-tint": "#5f5e5e",
-              "on-tertiary-fixed": "#1b1c17",
+              border: "#e2e8f0",
+              "surface-container": "#f8fafc",
+              "surface-tint": "#0d9488",
+              "on-tertiary-fixed": "#3730a3",
               "on-tertiary": "#ffffff",
-              tertiary: "#000000",
-              "on-error-container": "#93000a",
-              "on-secondary-fixed": "#062013",
+              tertiary: "#4f46e5",
+              "on-error-container": "#991b1b",
+              "on-secondary-fixed": "#0f766e",
               "on-secondary": "#ffffff",
-              error: "#ba1a1a",
-              background: "#f9f9f7",
-              "on-primary-fixed": "#1c1b1b",
-              "dark-text": "#FAFAF8",
-              primary: "#000000",
-              "surface-container-high": "#e8e8e6",
-              "secondary-fixed-dim": "#b0ceb9",
-              "primary-container": "#1c1b1b",
-              outline: "#747878",
-              "surface-container-highest": "#e2e3e1",
-              "on-background": "#1a1c1b",
+              error: "#ef4444",
+              background: "#F9F8F5",
+              "on-primary-fixed": "#ffffff",
+              "dark-text": "#0f172a",
+              primary: "#0f172a",
+              "surface-container-high": "#f1f5f9",
+              "secondary-fixed-dim": "#14b8a6",
+              "primary-container": "#1e293b",
+              outline: "#cbd5e1",
+              "surface-container-highest": "#e2e8f0",
+              "on-background": "#0f172a",
               "on-primary": "#ffffff",
-              "tertiary-fixed-dim": "#c8c7bf",
-              "on-secondary-container": "#4f6a59",
-              "dark-section": "#191919",
-              secondary: "#496454",
-              "on-surface": "#1a1c1b",
-              "surface-variant": "#e2e3e1",
+              "tertiary-fixed-dim": "#6366f1",
+              "on-secondary-container": "#0f766e",
+              "dark-section": "#f8fafc",
+              secondary: "#0d9488",
+              "on-surface": "#0f172a",
+              "surface-variant": "#f1f5f9",
               "on-error": "#ffffff",
-              "accent-foreground": "#FFFFFF",
+              "accent-foreground": "#ffffff",
               "surface-container-lowest": "#ffffff",
-              "on-primary-container": "#858383",
-              "on-surface-variant": "#444748",
-              "inverse-primary": "#c8c6c5",
-              "surface-container-low": "#f4f4f2",
-              "primary-fixed-dim": "#c8c6c5",
-              "on-secondary-fixed-variant": "#324c3d",
-              "on-tertiary-fixed-variant": "#474742",
-              "surface-bright": "#f9f9f7",
-              "inverse-on-surface": "#f1f1ef",
-              "tertiary-container": "#1b1c17",
-              "surface-dim": "#dadad8",
-              "secondary-container": "#ccead4",
-              "primary-fixed": "#e5e2e1",
-              "on-primary-fixed-variant": "#474746",
-              surface: "#F0F0EC",
-              "tertiary-fixed": "#e4e3db",
-              "outline-variant": "#c4c7c7",
-              "error-container": "#ffdad6",
-              "inverse-surface": "#2f3130",
-              "secondary-fixed": "#ccead4",
-              "on-tertiary-container": "#84847e",
+              "on-primary-container": "#ffffff",
+              "on-surface-variant": "#475569",
+              "inverse-primary": "#ffffff",
+              "surface-container-low": "#ffffff",
+              "primary-fixed-dim": "#1e293b",
+              "on-secondary-fixed-variant": "#0d9488",
+              "on-tertiary-fixed-variant": "#4f46e5",
+              "surface-bright": "#ffffff",
+              "inverse-on-surface": "#ffffff",
+              "tertiary-container": "#eef2ff",
+              "surface-dim": "#f8fafc",
+              "secondary-container": "#f0fdfa",
+              "primary-fixed": "#0f172a",
+              "on-primary-fixed-variant": "#475569",
+              surface: "#ffffff",
+              "tertiary-fixed": "#4f46e5",
+              "outline-variant": "#e2e8f0",
+              "error-container": "#fee2e2",
+              "inverse-surface": "#0f172a",
+              "secondary-fixed": "#0d9488",
+              "on-tertiary-container": "#3730a3",
             },
             borderRadius: {
               DEFAULT: "0.125rem",
@@ -229,120 +229,117 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
   </head>
 
   <body
     class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"
   >
     <header
-      class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border"
+      class="floating-header fixed top-0 left-0 right-0 z-50 pt-4 md:pt-6 px-margin-mobile md:px-margin-tablet lg:px-margin"
     >
       <div
-        class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between"
+        class="top-nav-row max-w-[1280px] mx-auto flex items-center justify-between relative"
       >
-        <div class="flex items-center gap-space-md">
-          <a
-            class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-primary"
-            data-path="home"
-            href="index.html"
-            ><img
-              src="images/logo.png"
-              alt="Progressive"
-              class="h-6 md:h-7 w-auto object-contain"
-          /></a>
-        </div>
-        <div class="hidden md:flex items-center gap-space-lg">
-          <nav
-            class="flex items-center gap-space-lg"
-            data-active-classes="text-primary font-medium underline underline-offset-4 decoration-1"
-          >
-            <a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="home"
-              href="index.html"
-              >Home</a
-            ><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="capabilities"
-              href="capabilities.html"
-              >Capabilities</a
-            ><a
-              aria-current="page"
-              class="transition-colors duration-150 text-primary font-medium underline underline-offset-4 decoration-1"
-              data-path="our-team"
-              href="our_team.html"
-              >Our Team</a
-            ><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="contact"
-              href="contact.html"
-              >Contact</a
-            >
-          </nav>
-          <div class="h-4 w-[1px] bg-border"></div>
-          <a
-            class="px-space-md py-space-xs rounded-lg border border-primary text-primary font-body-sm text-body-sm hover:bg-dark-section hover:text-on-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-            data-path="contact"
-            href="contact.html"
-            >Start a Conversation</a
-          >
-        </div>
-        <div class="flex md:hidden items-center gap-space-sm">
-          <button
-            aria-controls="mobile-nav-drawer"
-            aria-expanded="false"
-            aria-label="Toggle Navigation Menu"
-            class="p-space-xs text-on-surface hover:text-primary focus:outline-none"
-            id="mobile-nav-toggle"
-            type="button"
-          >
-            <span class="material-symbols-outlined text-[24px]">menu</span>
-          </button>
-        </div>
-      </div>
-      <div
-        class="hidden md:hidden border-b border-border bg-background px-margin-mobile py-space-lg"
-        id="mobile-nav-drawer"
-      >
+        <a
+          class="nav-logo"
+          data-path="home"
+          href="../index.html"
+          aria-label="Progressive home"
+        ><img
+          src="../assets/images/progressive.png"
+          alt="Progressive"
+          class="nav-logo-img"
+        /></a>
+
         <nav
-          class="flex flex-col gap-space-md"
-          data-active-classes="text-primary font-medium underline underline-offset-4"
+          class="nav-glass-pill hidden md:inline-flex"
+          aria-label="Main"
         >
           <a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            class="nav-pill-link"
             data-path="home"
-            href="index.html"
+            href="../index.html"
             >Home</a
           ><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            class="nav-pill-link"
             data-path="capabilities"
             href="capabilities.html"
             >Capabilities</a
           ><a
             aria-current="page"
-            class="transition-colors text-primary font-medium underline underline-offset-4"
+            class="nav-pill-link nav-pill-active"
             data-path="our-team"
             href="our_team.html"
             >Our Team</a
           ><a
-            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            class="nav-pill-link"
             data-path="contact"
             href="contact.html"
             >Contact</a
           >
         </nav>
-        <div class="mt-space-lg pt-space-md border-t border-border">
+
+        <a
+          class="nav-pill-cta hidden md:inline-flex"
+          data-path="contact"
+          href="contact.html"
+          >Start a Conversation <span class="cta-arrow">&rarr;</span></a
+        >
+
+        <div class="flex md:hidden items-center">
+          <button
+            aria-controls="mobile-nav-drawer"
+            aria-expanded="false"
+            aria-label="Toggle Navigation Menu"
+            class="nav-mobile-toggle"
+            id="mobile-nav-toggle"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-[22px]">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="hidden md:hidden mt-3 max-w-[1280px] mx-auto rounded-2xl p-space-lg nav-mobile-drawer"
+        id="mobile-nav-drawer"
+      >
+        <nav class="flex flex-col gap-1.5">
           <a
-            class="inline-block w-full text-center px-space-md py-space-sm rounded-lg border border-primary bg-primary text-on-primary font-body-sm text-body-sm hover:bg-dark-section transition-colors"
+            class="nav-drawer-link"
+            data-path="home"
+            href="../index.html"
+            >Home</a
+          ><a
+            class="nav-drawer-link"
+            data-path="capabilities"
+            href="capabilities.html"
+            >Capabilities</a
+          ><a
+            aria-current="page"
+            class="nav-drawer-link nav-drawer-active"
+            data-path="our-team"
+            href="our_team.html"
+            >Our Team</a
+          ><a
+            class="nav-drawer-link"
             data-path="contact"
             href="contact.html"
-            >Start a Conversation</a
+            >Contact</a
+          >
+        </nav>
+        <div class="mt-space-md pt-space-md border-t border-slate-200">
+          <a
+            class="nav-pill-cta flex w-full justify-center"
+            data-path="contact"
+            href="contact.html"
+            >Start a Conversation <span class="cta-arrow">&rarr;</span></a
           >
         </div>
       </div>
     </header>
-    <main class="w-full pt-16 bg-background min-h-screen">
+    <main class="w-full pt-24 md:pt-28 bg-background min-h-screen">
       <div class="flex flex-col w-full">
         <!-- Top Editorial Header & Intro -->
         <section class="w-full pt-space-xl pb-space-2xl border-b border-border">
@@ -576,7 +573,7 @@
                       <img
                         class="w-full h-full object-cover grayscale contrast-125"
                         alt="Jonnifer C. Mandigma portrait"
-                        src="images/profile-joni.jpg"
+                        src="../assets/images/profile-joni.jpg"
                       />
                     </div>
                     <div class="flex flex-col">
@@ -595,7 +592,7 @@
                       <span
                         class="font-body-sm text-body-sm text-secondary font-medium mt-space-xs"
                       >
-                        IT Instructor &amp; Project Management
+                        IT Educator  &amp; Project Management Professional
                       </span>
                     </div>
                   </div>
@@ -686,7 +683,7 @@
                       <img
                         class="w-full h-full object-cover grayscale contrast-125"
                         alt="Gabriel Winfred P. Vargas portrait"
-                        src="images/profile-winfred.jpg"
+                        src="../assets/images/profile-winfred.jpg"
                       />
                     </div>
                     <div class="flex flex-col">
@@ -808,7 +805,7 @@
                       <img
                         class="w-full h-full object-cover grayscale contrast-125"
                         alt="Evander Wines portrait"
-                        src="images/profile-evan.png"
+                        src="../assets/images/profile-evan.png"
                       />
                     </div>
                     <div class="flex flex-col">
@@ -1084,7 +1081,7 @@
               <a
                 class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
                 data-path="home"
-                href="index.html"
+                href="../index.html"
                 >Home</a
               ><a
                 class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
@@ -1128,6 +1125,6 @@
         </div>
       </div>
     </footer>
-    <script src="site.js"></script>
+    <script src="../assets/js/site.js"></script>
   </body>
 </html>
