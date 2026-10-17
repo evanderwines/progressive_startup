@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="45 45 1500 895" width="1500" height="895" role="img" aria-labelledby="t">
+<title id="t">Progressive: Accounting, Inventory Management, Marketing, Sales Analytics, Customer Support and Reporting modules connected to a central hub</title>
+<style>
+.f,.p,.lg,.dr,.pl,.nd{animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate}
+.f{animation-name:fl;animation-duration:5.4s}
+.f2{animation-duration:6.2s;animation-delay:-2.1s}.f3{animation-duration:5.8s;animation-delay:-3.3s}
+.f4{animation-duration:6.6s;animation-delay:-1.2s}.f5{animation-duration:5.1s;animation-delay:-4s}.f6{animation-duration:6s;animation-delay:-.6s}
+.p{animation-name:fp;animation-duration:3.8s}.p2{animation-duration:4.6s;animation-delay:-1.7s}
+.lg{animation-name:fl;animation-duration:4.4s}
+.pl{animation-name:pu;animation-duration:2.8s}.nd{animation-name:pu;animation-duration:2.2s}
+.d1{animation-name:d1;animation-duration:9s}.d2{animation-name:d2;animation-duration:11s;animation-delay:-4s}.d3{animation-name:d3;animation-duration:13s;animation-delay:-7s}
+.fw{fill:none;stroke:#8ff8ff;stroke-width:3;stroke-linecap:round;stroke-dasharray:14 60;animation:fw 3.2s linear infinite}
+.fw2{animation-duration:4s;animation-delay:-1.3s}
+@keyframes fl{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+@keyframes fp{from{transform:translateY(2px)}to{transform:translateY(-7px)}}
+@keyframes pu{from{opacity:.4}to{opacity:1}}
+@keyframes fw{to{stroke-dashoffset:-74}}
+@keyframes d1{to{transform:translate(9px,-13px)}}
+@keyframes d2{to{transform:translate(-12px,8px)}}
+@keyframes d3{to{transform:translate(7px,12px)}}
+text{text-rendering:geometricPrecision;font-family:Poppins,Inter,"Segoe UI",Arial,sans-serif}
+.h{font-size:25px;font-weight:700;fill:#14216b}.s{font-size:17px;fill:#3d58a8}
+.fg{stroke-width:10;opacity:.16}
+.rp{fill:none;stroke:#22e6ee;stroke-width:2.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:rp 5.6s ease-out infinite}.rp2{animation-delay:-2.8s}
+.sh{transform-box:fill-box;transform-origin:center;animation:sh 4.4s ease-in-out infinite alternate}
+.f,.lg{will-change:transform}
+@keyframes rp{0%{transform:scale(.72);opacity:0}25%{opacity:.55}100%{transform:scale(1.18);opacity:0}}
+@keyframes sh{from{transform:scale(1);opacity:.3}to{transform:scale(.86);opacity:.15}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="gb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fb4ff"/><stop offset="1" stop-color="#1544d6"/></linearGradient>
+<linearGradient id="gn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d4fa3"/><stop offset="1" stop-color="#0a1948"/></linearGradient>
+<linearGradient id="gt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e3ecfb"/></linearGradient>
+<linearGradient id="gk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a5163"/><stop offset="1" stop-color="#0b0f1b"/></linearGradient>
+<linearGradient id="pr-p-face" x1="0" y1="0" x2=".85" y2="1">
+  <stop offset="0" stop-color="#647b9b"/>
+  <stop offset=".22" stop-color="#3f526f"/>
+  <stop offset=".56" stop-color="#1d2c46"/>
+  <stop offset="1" stop-color="#080d19"/>
+</linearGradient>
+<linearGradient id="pr-p-side" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#283c61"/>
+  <stop offset=".45" stop-color="#142344"/>
+  <stop offset="1" stop-color="#080f2a"/>
+</linearGradient>
+<linearGradient id="pr-r-face" x1="0" y1="0" x2=".8" y2="1">
+  <stop offset="0" stop-color="#8af7ff"/>
+  <stop offset=".18" stop-color="#36d7ff"/>
+  <stop offset=".42" stop-color="#168cff"/>
+  <stop offset=".72" stop-color="#1456e5"/>
+  <stop offset="1" stop-color="#092b9e"/>
+</linearGradient>
+<linearGradient id="pr-r-side" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#176fe0"/>
+  <stop offset=".5" stop-color="#0b3c9c"/>
+  <stop offset="1" stop-color="#071b60"/>
+</linearGradient>
+<linearGradient id="pr-r-edge" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#c8ffff"/>
+  <stop offset=".38" stop-color="#4beaff"/>
+  <stop offset="1" stop-color="#1787ff"/>
+</linearGradient>
+<radialGradient id="gw"><stop offset="0" stop-color="#19d6ff" stop-opacity=".38"/><stop offset="1" stop-color="#19d6ff" stop-opacity="0"/></radialGradient><radialGradient id="gl2"><stop offset="0" stop-color="#4aa8ff" stop-opacity=".4"/><stop offset="1" stop-color="#4aa8ff" stop-opacity="0"/></radialGradient>
+<path id="pr-p-shape" fill-rule="evenodd" d="M-100 78V-37C-100-70-79-91-47-91H4C36-91 56-72 56-41C56-8 37 11 4 11H-53V78H-100ZM-53-59H2C18-59 25-52 25-40C25-27 17-20 2-20H-53Z"/>
+<path id="pr-r-shape" fill-rule="evenodd" d="M-10-90H53C90-90 114-69 114-37C114-13 101 3 80 12L119 78H79L46 20H25V78H-10V-90ZM25-59H51C68-59 77-52 77-38C77-24 68-17 51-17H25Z"/>
+<g id="plat"><ellipse cy="78" rx="215" ry="88" fill="url(#gw)"/><path d="M-170 0 0 85 170 0V24L0 109-170 24Z" fill="url(#gn)"/><path d="M0 85 170 0V24L0 109Z" fill="#06123a" opacity=".35"/><path d="M0-85 170 0 0 85-170 0Z" fill="url(#gt)" stroke="#fff" stroke-width="4" stroke-linejoin="round"/><path d="M0-70 140 0 0 70-140 0Z" fill="none" stroke="#bfe9ff" stroke-width="1.5" opacity=".8"/></g>
+<path id="edge" d="M-170 24 0 109 170 24" fill="none" stroke="#22e6ee" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="bx"><path d="M0-14 24-2 0 10-24-2Z" fill="#efc59b"/><path d="M-24-2 0 10V38L-24 26Z" fill="#c98f58"/><path d="M24-2 0 10V38L24 26Z" fill="#b57a45"/></g>
+<g id="cy"><rect x="-15" y="-34" width="30" height="34"/><ellipse rx="15" ry="7"/><ellipse cy="-34" rx="15" ry="7"/><ellipse cy="-34" rx="15" ry="7" fill="#fff" opacity=".3"/></g>
+<path id="cb" d="M0-7 6-3.5V3.5L0 7-6 3.5V-3.5Z"/>
+<g id="pt"><path d="M-10-10C-24-40-4-52 0-32 6-52 24-40 10-10Z" fill="#1fa37a"/><path d="M-12-10h24l-4 22h-16Z" fill="#fff" stroke="#d5e2f7"/></g>
+</defs>
+
+<!-- connector lines + flowing light -->
+<g fill="none" stroke="#19c9f2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".7">
+<path id="c1" d="M720 395 690 362 640 335 606 322"/><path id="c2" d="M830 400 892 362 948 330"/>
+<path id="c3" d="M640 470 600 478 555 500 512 500"/><path id="c4" d="M900 480 942 480 1000 500 1025 500"/>
+<path id="c5" d="M720 600 700 610 650 635 590 690"/><path id="c6" d="M820 600 860 640 910 668 965 700"/>
+<path d="M322 142H388L418 172M273 372H328L356 392M1260 413H1292M357 760 385 775 409 785M1215 781 1185 805 1160 808"/>
+</g>
+<g><use href="#c1" class="fw fg"/><use href="#c2" class="fw fw2 fg"/><use href="#c3" class="fw fg"/><use href="#c4" class="fw fw2 fg"/><use href="#c5" class="fw fg"/><use href="#c6" class="fw fw2 fg"/></g>
+<g><use href="#c1" class="fw"/><use href="#c2" class="fw fw2"/><use href="#c3" class="fw"/><use href="#c4" class="fw fw2"/><use href="#c5" class="fw"/><use href="#c6" class="fw fw2"/></g>
+<g fill="#fff" stroke="#19c9f2" stroke-width="3">
+<circle class="nd" cx="606" cy="322" r="6"/><circle class="nd" cx="948" cy="330" r="6"/><circle class="nd" cx="512" cy="500" r="6"/><circle class="nd" cx="1025" cy="500" r="6"/><circle class="nd" cx="650" cy="635" r="6"/><circle class="nd" cx="910" cy="668" r="6"/>
+</g>
+
+<!-- ACCOUNTING -->
+<g class="f f1"><g transform="translate(535 235) scale(.94)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<use href="#pt" x="-128" y="0"/>
+<path d="M-85-20-30-72 25-50-30 4Z" fill="#fff" stroke="#cfdcf3"/><path d="M-70-27-38-52M-62-17-30-42M-54-8-22-33" stroke="#9db5e0" stroke-width="2"/>
+<g transform="translate(14 24) matrix(.87 .5 -.87 .5 0 0)"><rect x="-55" y="-38" width="110" height="76" rx="6" fill="#0b1740"/></g>
+<g transform="translate(14 12) matrix(.87 .5 -.87 .5 0 0)"><rect x="-55" y="-38" width="110" height="76" rx="6" fill="#1b2a6b"/><rect x="-46" y="-32" width="92" height="12" fill="#0e3a5c"/><path d="M-44-6H44M-44 10H44M-44 26H44" stroke="#25e5d6" stroke-width="10" stroke-dasharray="14 5"/></g>
+<use href="#cy" x="100" y="-5" fill="#1e63e6"/><use href="#cy" x="100" y="-45" fill="#1e63e6"/><use href="#cy" x="132" y="14" fill="#1fb8a6"/><use href="#cy" x="132" y="-22" fill="#1fb8a6"/>
+<g class="p"><path d="M-100-125-38-155V-98L-100-68Z" fill="#e8f7ff" stroke="#6fd3ff" stroke-width="2" opacity=".9"/><path d="M-90-92-70-106-58-118-44-134" stroke="#1e6bf3" stroke-width="3.5" fill="none" stroke-linecap="round"/></g>
+<g class="p p2"><path d="M55-165 160-130V-55L55-90Z" fill="#fff" stroke="#3a6bf0" stroke-width="3"/><g font-size="13" font-weight="700" fill="#1e63e6" transform="translate(78 -122) skewY(18)"><text>+12,450</text><text y="17" fill="#d23">-3,280</text><text y="34">+9,170</text></g></g>
+</g></g>
+
+<!-- INVENTORY -->
+<g class="f f2"><g transform="translate(1042 265) scale(.93)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<path d="M-70-150 40-100V10L-70-40Z" fill="#dfe8f8" opacity=".6"/>
+<path d="M-70-150V-40M40-100V10M-70-95 40-45M-70-50 40 0" stroke="#17255e" stroke-width="7" stroke-linecap="round"/>
+<use href="#bx" x="-42" y="-112"/><use href="#bx" x="-2" y="-92"/><use href="#bx" x="-42" y="-66"/><use href="#bx" x="-2" y="-46"/><use href="#bx" x="-22" y="-14"/>
+<use href="#bx" x="-125" y="5" opacity=".85"/><use href="#bx" x="-100" y="30"/>
+<path d="M118-22 142-34V22L118 34Z" fill="#1a2a5a"/><path d="M138-40 158-50V-34L138-24Z" fill="#14b9d4"/>
+<g class="p"><path d="M75-175 135-148V-88L75-115Z" fill="#e8f7ff" stroke="#6fd3ff" stroke-width="2"/><path d="M88-152V-112M97-148V-108M104-145V-105M115-140V-100" stroke="#1e63e6" stroke-width="3"/></g>
+</g></g>
+
+<!-- MARKETING -->
+<g class="f f3"><g transform="translate(347 550) scale(.92)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<use href="#pt" x="-120" y="-5"/>
+<path d="M-75-150 60-95V-10L-75-60Z" fill="#e6eefc" stroke="#cfdcf3" stroke-width="3"/><path d="M-65-135 50-90V-20L-65-62Z" fill="#17967f"/>
+<path d="M-45-95 5-78V-48L-45-65Z" fill="#fff"/><path d="M5-85 22-79V-52L5-58Z" fill="#fff"/><path d="M-30-100l-14-6M-22-97l-8-12" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path d="M18-70 52-56V-30L18-44Z" fill="#9ed0ff"/><path d="M26-52l8-8 8 6 6-8" stroke="#1e6bf3" stroke-width="3" fill="none"/>
+<g class="p"><path d="M78-130 112-116V-30L78-44Z" fill="#17255e"/><circle cx="95" cy="-100" r="6" fill="#4aa3ff"/><circle cx="95" cy="-78" r="6" fill="#4aa3ff"/><circle cx="95" cy="-56" r="6" fill="#4aa3ff"/></g>
+<g transform="translate(15 58)"><circle r="40" fill="#fff" stroke="#1e63e6" stroke-width="3"/><circle r="30" fill="#1e63e6"/><circle r="20" fill="#fff"/><circle r="10" fill="#1e63e6"/><path d="M0 0 40-22" stroke="#e83" stroke-width="4" stroke-linecap="round"/></g>
+</g></g>
+
+<!-- SALES ANALYTICS -->
+<g class="f f4"><g transform="translate(1183 590) scale(.84)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<path d="M-60-230 80-170V-35L-60-95Z" fill="#14265e" stroke="#2c4ba0" stroke-width="3"/>
+<path d="M-40-175V-130M-22-170V-150M-4-164V-120M14-155V-135" stroke="#2fc8e8" stroke-width="9"/><path d="M-45-100-15-92 20-78 55-62" stroke="#25e5d6" stroke-width="3" fill="none"/>
+<circle cx="45" cy="-85" r="18" fill="none" stroke="#4aa3ff" stroke-width="9"/>
+<path d="M-120-50-80-35V-5L-120-20Z" fill="#cfe5ff" stroke="#fff"/><path d="M-112-30V-18M-100-30V-14M-90-35V-12" stroke="#1e63e6" stroke-width="6"/>
+<g class="p"><path d="M95-20 135 0V50L95 30Z" fill="#e8f7ff" stroke="#6fd3ff" stroke-width="2"/></g>
+<path d="M-32-20-20-14V41L-32 35Z M24 31 36 37V65L24 59Z" fill="#1fc6b8"/><path d="M-8-20-20-14V41L-8 35Z M48 31 36 37V65L48 59Z" fill="#14958f"/><path d="M-20-26-8-20-20-14-32-20Z M36 25 48 31 36 37 24 31Z" fill="#7cf3e6"/><path d="M-4 7 8 13V53L-4 47Z" fill="#2d78f0"/><path d="M20 7 8 13V53L20 47Z" fill="#1648b8"/><path d="M8 1 20 7 8 13-4 7Z" fill="#7dbbff"/>
+</g></g>
+
+<!-- CUSTOMER SUPPORT -->
+<g class="f f5"><g transform="translate(510 840) scale(.82)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<path d="M-30-30 70-70 100-50 0 0Z" fill="#fff" stroke="#cfdcf3"/>
+<path d="M10-140 100-100V-30L10-70Z" fill="#17255e"/><path d="M25-120 85-93V-60L25-87Z" fill="#2a5bd0"/>
+<path d="M-85-20V-60Q-85-110-45-110T-5-60V-20Z" fill="#1e6bf3"/><circle cx="-45" cy="-120" r="24" fill="#f6c9a8"/><path d="M-72-120Q-70-152-45-150T-18-118Q-30-135-45-134T-72-120Z" fill="#14216b"/>
+<g class="p"><path d="M-105-195a28 28 0 0 1 56 0" fill="none" stroke="#1d4fb0" stroke-width="9"/><rect x="-112" y="-200" width="12" height="30" rx="5" fill="#1d4fb0"/><rect x="-54" y="-200" width="12" height="30" rx="5" fill="#1d4fb0"/></g>
+<g class="p p2"><rect x="-20" y="-195" width="52" height="34" rx="9" fill="#2fc8b0"/><rect x="25" y="-158" width="42" height="28" rx="8" fill="#2fc8b0"/><path d="M-8-178h26" stroke="#fff" stroke-width="5" stroke-dasharray="1 9" stroke-linecap="round"/></g>
+</g></g>
+
+<!-- REPORTING -->
+<g class="f f6"><g transform="translate(983 860) scale(.92)">
+<use href="#plat"/><use href="#edge" class="pl"/>
+<path d="M-115-15 30-80 130-30-15 38Z" fill="#14265e"/><path d="M-115-28 30-93 130-43-15 25Z" fill="#2fc8d8"/><path d="M-115-42 30-107 130-57-15 11Z" fill="url(#gt)" stroke="#cfdcf3" stroke-width="2"/>
+<circle cx="-45" cy="-62" r="22" fill="none" stroke="#1e63e6" stroke-width="12" stroke-dasharray="90 50"/>
+<path d="M0-40 20-50M20-30 40-40M40-20 60-30M60-10 80-20" stroke="#4aa3ff" stroke-width="9"/>
+<g class="p"><path d="M30-185 130-145V-75L30-115Z" fill="#e8f7ff" stroke="#6fd3ff" stroke-width="2" opacity=".9"/><path d="M42-135 62-148 82-132 104-146" stroke="#1e63e6" stroke-width="3" fill="none"/></g>
+</g></g>
+
+<!-- CENTER HUB -->
+<g transform="translate(769 515)">
+<ellipse cx="0" cy="55" rx="270" ry="115" fill="url(#gw)" class="pl"/><ellipse class="rp" cx="0" cy="55" rx="215" ry="88"/><ellipse class="rp rp2" cx="0" cy="55" rx="215" ry="88"/>
+<path d="M-195 20 0 108 195 20V55L0 143-195 55Z" fill="url(#gn)"/><path d="M-195 55 0 143 195 55" fill="none" stroke="#22e6ee" stroke-width="3.5" stroke-linejoin="round" class="pl"/>
+<path d="M-195 20 0-68 195 20 0 108Z" fill="#17368c"/>
+<path d="M-160-18 0-90 160-18V12L0 84-160 12Z" fill="url(#gn)"/>
+<path d="M-160-18 0-90 160-18 0 54Z" fill="#2756c9" stroke="#8fe9ff" stroke-width="2.5" stroke-linejoin="round" class="pl"/>
+<path d="M-105-48 0-95 105-48 0 0Z" fill="#e5f0ff" stroke="#a9d6ff" stroke-width="2"/>
+<path id="tp" d="M-98 30 0 66 98 30" fill="none"/><text font-size="21" font-weight="600" letter-spacing="3" fill="#fff"><textPath href="#tp" startOffset="50%" text-anchor="middle">PROGRESSIVE</textPath></text>
+</g>
+<ellipse cx="769" cy="470" rx="91" ry="25" fill="#081943" opacity=".3" class="sh"/>
+<ellipse cx="772" cy="400" rx="145" ry="108" fill="url(#gl2)" class="pl"/>
+<g class="lg" aria-label="PR logo">
+  <g transform="translate(772 385)">
+    <!-- P: offset extrusion and a narrow metallic rim create a substantial, readable silhouette. -->
+    <g transform="translate(-39 0) scale(.94 1)">
+      <use href="#pr-p-shape" transform="translate(0 15)" fill="#07102a" stroke="#07102a" stroke-width="7" stroke-linejoin="round"/>
+      <use href="#pr-p-shape" transform="translate(0 8)" fill="url(#pr-p-side)" stroke="#243a63" stroke-width="4.5" stroke-linejoin="round"/>
+      <use href="#pr-p-shape" fill="url(#pr-p-face)" stroke="#8fa9ce" stroke-width="2.7" stroke-linejoin="round"/>
+      <path d="M-92-36C-92-62-74-82-47-82H3C20-82 34-75 42-62" fill="none" stroke="#d8e7ff" stroke-width="3.4" stroke-linecap="round" opacity=".82"/>
+      <path d="M-90-23V61" fill="none" stroke="#91a8cc" stroke-width="2.6" stroke-linecap="round" opacity=".68"/>
+      <path d="M-48-75H1" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" opacity=".4"/>
+    </g>
+
+    <!-- R: slightly forward of the P, with a bright cyan upper bevel and deep blue sidewall. -->
+    <use href="#pr-r-shape" transform="translate(0 16)" fill="#06184f" stroke="#06184f" stroke-width="7" stroke-linejoin="round"/>
+    <use href="#pr-r-shape" transform="translate(0 8)" fill="url(#pr-r-side)" stroke="#0a3c9a" stroke-width="4.5" stroke-linejoin="round"/>
+    <use href="#pr-r-shape" fill="url(#pr-r-face)" stroke="url(#pr-r-edge)" stroke-width="2.7" stroke-linejoin="round"/>
+    <path d="M18-76H52C77-76 94-63 98-43" fill="none" stroke="#e3ffff" stroke-width="3.4" stroke-linecap="round" opacity=".92"/>
+    <path d="M55 25 80 66" fill="none" stroke="#a1f5ff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+    <path d="M-1-72V-27" fill="none" stroke="#b4faff" stroke-width="1.8" stroke-linecap="round" opacity=".48"/>
+    <!-- Inner counter stays uncluttered so the R reads cleanly at smaller sizes. -->
+  </g>
+</g>
+
+<!-- drifting geometry -->
+<g fill="#2f9bff">
+<use href="#cb" class="dr d1" x="601" y="383"/><use href="#cb" class="dr d2" x="933" y="400" fill="#22e6ee"/><use href="#cb" class="dr d3" x="968" y="432" fill="#22e6ee"/>
+<use href="#cb" class="dr d1" x="580" y="429"/><use href="#cb" class="dr d2" x="553" y="531" fill="#22e6ee"/><use href="#cb" class="dr d3" x="568" y="602" fill="#22e6ee"/>
+<use href="#cb" class="dr d1" x="964" y="607"/><use href="#cb" class="dr d2" x="699" y="682" fill="#22e6ee"/><use href="#cb" class="dr d3" x="736" y="737"/>
+<use href="#cb" class="dr d1" x="865" y="295"/><use href="#cb" class="dr d2" x="1055" y="72"/><use href="#cb" class="dr d3" x="935" y="162" fill="#22e6ee"/>
+<use href="#cb" class="dr d1" x="406" y="358" fill="#22e6ee"/><use href="#cb" class="dr d2" x="502" y="664"/><use href="#cb" class="dr d3" x="1017" y="680" fill="#22e6ee"/><use href="#cb" class="dr d1" x="1002" y="462"/>
+</g>
+
+<!-- labels -->
+<g>
+<circle cx="118" cy="138" r="34" fill="#0f9d8a"/><rect x="105" y="124" width="26" height="28" rx="4" fill="none" stroke="#fff" stroke-width="3"/><path d="M110 130h16M111 138h3M118 138h3M125 138h3M111 145h3M118 145h3M125 145h3" stroke="#fff" stroke-width="3"/>
+<text class="h" x="167" y="132">Accounting</text><text class="s" x="167" y="164">Track finances.</text><text class="s" x="167" y="189">Make smarter decisions.</text>
+<circle cx="1212" cy="129" r="34" fill="#1d6bf3"/><path d="M1212 112 1229 121V138L1212 147 1195 138V121ZM1195 121 1212 130 1229 121M1212 130V147" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+<text class="h" x="1259" y="127">Inventory Management</text><text class="s" x="1259" y="157">Keep the right stock.</text><text class="s" x="1259" y="181">At the right time.</text>
+<circle cx="88" cy="381" r="34" fill="#0f9d8a"/><path d="M68 374H80L100 362V398L80 386H68ZM74 386l4 14h8l-3-14" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M106 372l8-4M106 380h9M106 388l8 4" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<text class="h" x="143" y="372">Marketing</text><text class="s" x="143" y="403">Reach more people.</text><text class="s" x="143" y="427">Grow your brand.</text>
+<circle cx="1344" cy="412" r="34" fill="#1d4fe0"/><path d="M1327 430V420M1337 430V412M1347 430V418M1357 430V404" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M1326 408 1340 396 1348 402 1362 390M1354 389h9v9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="h" x="1392" y="411">Sales</text><text class="h" x="1392" y="439">Analytics</text><text class="s" x="1388" y="471" style="font-size:16px">Turn data into</text><text class="s" x="1388" y="493" style="font-size:16px">bigger opportunities.</text>
+<circle cx="86" cy="769" r="34" fill="#1d6bf3"/><path d="M69 774V766Q69 748 86 748T103 766V774" fill="none" stroke="#fff" stroke-width="4"/><rect x="65" y="765" width="9" height="15" rx="4" fill="#fff"/><rect x="98" y="765" width="9" height="15" rx="4" fill="#fff"/><path d="M102 780Q102 788 88 789" fill="none" stroke="#fff" stroke-width="3"/>
+<text class="h" x="140" y="761">Customer Support</text><text class="s" x="140" y="792">Solve faster.</text><text class="s" x="140" y="817">Keep customers happy.</text>
+<circle cx="1268" cy="782" r="34" fill="#0f9d8a"/><path d="M1256 764H1274L1282 772V800H1256Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M1262 782H1276M1262 790H1276" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<text class="h" x="1322" y="772">Reporting</text><text class="s" x="1322" y="806">See the big picture.</text><text class="s" x="1322" y="831">Plan for what's next.</text>
+</g>
+</svg>
