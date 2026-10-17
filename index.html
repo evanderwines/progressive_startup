@@ -1,832 +1,1147 @@
 <!doctype html>
 
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="web_standard" name="shell-type" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet" />
-  <style>
-    @layer base {
+        body {
+          overscroll-behavior: none;
+        }
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
       }
 
-      body {
-        overscroll-behavior: none;
+      ::-webkit-scrollbar {
+        display: none;
       }
-
-      main> :first-child {
-        margin-top: 0 !important;
-      }
-
-      main> :last-child {
-        margin-bottom: 0 !important;
-      }
-    }
-
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            border: "#e2e8f0",
-            "surface-container": "#f8fafc",
-            "surface-tint": "#0d9488",
-            "on-tertiary-fixed": "#3730a3",
-            "on-tertiary": "#ffffff",
-            tertiary: "#4f46e5",
-            "on-error-container": "#991b1b",
-            "on-secondary-fixed": "#0f766e",
-            "on-secondary": "#ffffff",
-            error: "#ef4444",
-            background: "#F9F8F5",
-            "on-primary-fixed": "#ffffff",
-            "dark-text": "#0f172a",
-            primary: "#0f172a",
-            "surface-container-high": "#f1f5f9",
-            "secondary-fixed-dim": "#14b8a6",
-            "primary-container": "#1e293b",
-            outline: "#cbd5e1",
-            "surface-container-highest": "#e2e8f0",
-            "on-background": "#0f172a",
-            "on-primary": "#ffffff",
-            "tertiary-fixed-dim": "#6366f1",
-            "on-secondary-container": "#0f766e",
-            "dark-section": "#f8fafc",
-            secondary: "#0d9488",
-            "on-surface": "#0f172a",
-            "surface-variant": "#f1f5f9",
-            "on-error": "#ffffff",
-            "accent-foreground": "#ffffff",
-            "surface-container-lowest": "#ffffff",
-            "on-primary-container": "#ffffff",
-            "on-surface-variant": "#475569",
-            "inverse-primary": "#ffffff",
-            "surface-container-low": "#ffffff",
-            "primary-fixed-dim": "#1e293b",
-            "on-secondary-fixed-variant": "#0d9488",
-            "on-tertiary-fixed-variant": "#4f46e5",
-            "surface-bright": "#ffffff",
-            "inverse-on-surface": "#ffffff",
-            "tertiary-container": "#eef2ff",
-            "surface-dim": "#f8fafc",
-            "secondary-container": "#f0fdfa",
-            "primary-fixed": "#0f172a",
-            "on-primary-fixed-variant": "#475569",
-            surface: "#ffffff",
-            "tertiary-fixed": "#4f46e5",
-            "outline-variant": "#e2e8f0",
-            "error-container": "#fee2e2",
-            "inverse-surface": "#0f172a",
-            "secondary-fixed": "#0d9488",
-            "on-tertiary-container": "#3730a3",
-          },
-          borderRadius: {
-            DEFAULT: "0.125rem",
-            lg: "0.25rem",
-            xl: "0.5rem",
-            full: "0.75rem",
-          },
-          spacing: {
-            "margin-tablet": "2rem",
-            gutter: "2rem",
-            "space-sm": "0.5rem",
-            "margin-mobile": "1.25rem",
-            "space-3xl": "7rem",
-            "space-md": "1rem",
-            "gutter-mobile": "1rem",
-            "space-lg": "1.5rem",
-            margin: "4rem",
-            "space-xl": "2.5rem",
-            "space-xs": "0.25rem",
-            "space-2xl": "4rem",
-          },
-          fontFamily: {
-            techno: ["Techno", "Technor", "sans-serif"],
-            telma: ["Telma", "serif"],
-            eyebrow: ["Geist"],
-            "headline-md-mobile": ["Geist"],
-            "display-hero": ["Geist"],
-            "headline-lg": ["Geist"],
-            "label-mono-sm": ["Geist"],
-            "body-lg": ["Geist"],
-            "display-hero-mobile": ["Geist"],
-            "body-md": ["Geist"],
-            "headline-sm": ["Geist"],
-            "body-sm": ["Geist"],
-            "headline-lg-mobile": ["Geist"],
-            "headline-md": ["Geist"],
-          },
-          fontSize: {
-            eyebrow: [
-              "11px",
-              {
-                lineHeight: "14px",
-                letterSpacing: "0.08em",
-                fontWeight: "600",
-              },
-            ],
-            "headline-md-mobile": [
-              "26px",
-              {
-                lineHeight: "32px",
-                letterSpacing: "-0.01em",
-                fontWeight: "500",
-              },
-            ],
-            "display-hero": [
-              "72px",
-              {
-                lineHeight: "76px",
-                letterSpacing: "-0.03em",
-                fontWeight: "500",
-              },
-            ],
-            "headline-lg": [
-              "48px",
-              {
-                lineHeight: "52px",
-                letterSpacing: "-0.02em",
-                fontWeight: "500",
-              },
-            ],
-            "label-mono-sm": [
-              "12px",
-              {
-                lineHeight: "16px",
-                letterSpacing: "0.06em",
-                fontWeight: "500",
-              },
-            ],
-            "body-lg": [
-              "18px",
-              {
-                lineHeight: "28px",
-                letterSpacing: "-0.005em",
-                fontWeight: "400",
-              },
-            ],
-            "display-hero-mobile": [
-              "42px",
-              {
-                lineHeight: "46px",
-                letterSpacing: "-0.025em",
-                fontWeight: "500",
-              },
-            ],
-            "body-md": [
-              "16px",
-              { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" },
-            ],
-            "headline-sm": [
-              "22px",
-              {
-                lineHeight: "28px",
-                letterSpacing: "-0.01em",
-                fontWeight: "500",
-              },
-            ],
-            "body-sm": [
-              "14px",
-              { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
-            ],
-            "headline-lg-mobile": [
-              "34px",
-              {
-                lineHeight: "38px",
-                letterSpacing: "-0.015em",
-                fontWeight: "500",
-              },
-            ],
-            "headline-md": [
-              "32px",
-              {
-                lineHeight: "38px",
-                letterSpacing: "-0.015em",
-                fontWeight: "500",
-              },
-            ],
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              border: "#DEDED8",
+              "surface-container": "#eeeeec",
+              "surface-tint": "#5f5e5e",
+              "on-tertiary-fixed": "#1b1c17",
+              "on-tertiary": "#ffffff",
+              tertiary: "#000000",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#062013",
+              "on-secondary": "#ffffff",
+              error: "#ba1a1a",
+              background: "#f9f9f7",
+              "on-primary-fixed": "#1c1b1b",
+              "dark-text": "#FAFAF8",
+              primary: "#000000",
+              "surface-container-high": "#e8e8e6",
+              "secondary-fixed-dim": "#b0ceb9",
+              "primary-container": "#1c1b1b",
+              outline: "#747878",
+              "surface-container-highest": "#e2e3e1",
+              "on-background": "#1a1c1b",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#c8c7bf",
+              "on-secondary-container": "#4f6a59",
+              "dark-section": "#191919",
+              secondary: "#496454",
+              "on-surface": "#1a1c1b",
+              "surface-variant": "#e2e3e1",
+              "on-error": "#ffffff",
+              "accent-foreground": "#FFFFFF",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#858383",
+              "on-surface-variant": "#444748",
+              "inverse-primary": "#c8c6c5",
+              "surface-container-low": "#f4f4f2",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-secondary-fixed-variant": "#324c3d",
+              "on-tertiary-fixed-variant": "#474742",
+              "surface-bright": "#f9f9f7",
+              "inverse-on-surface": "#f1f1ef",
+              "tertiary-container": "#1b1c17",
+              "surface-dim": "#dadad8",
+              "secondary-container": "#ccead4",
+              "primary-fixed": "#e5e2e1",
+              "on-primary-fixed-variant": "#474746",
+              surface: "#F0F0EC",
+              "tertiary-fixed": "#e4e3db",
+              "outline-variant": "#c4c7c7",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#2f3130",
+              "secondary-fixed": "#ccead4",
+              "on-tertiary-container": "#84847e",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            spacing: {
+              "margin-tablet": "2rem",
+              gutter: "2rem",
+              "space-sm": "0.5rem",
+              "margin-mobile": "1.25rem",
+              "space-3xl": "7rem",
+              "space-md": "1rem",
+              "gutter-mobile": "1rem",
+              "space-lg": "1.5rem",
+              margin: "4rem",
+              "space-xl": "2.5rem",
+              "space-xs": "0.25rem",
+              "space-2xl": "4rem",
+            },
+            fontFamily: {
+              eyebrow: ["Geist"],
+              "headline-md-mobile": ["Geist"],
+              "display-hero": ["Geist"],
+              "headline-lg": ["Geist"],
+              "label-mono-sm": ["Geist"],
+              "body-lg": ["Geist"],
+              "display-hero-mobile": ["Geist"],
+              "body-md": ["Geist"],
+              "headline-sm": ["Geist"],
+              "body-sm": ["Geist"],
+              "headline-lg-mobile": ["Geist"],
+              "headline-md": ["Geist"],
+            },
+            fontSize: {
+              eyebrow: [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.08em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md-mobile": [
+                "26px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "76px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "500",
+                },
+              ],
+              "label-mono-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.06em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.005em",
+                  fontWeight: "400",
+                },
+              ],
+              "display-hero-mobile": [
+                "42px",
+                {
+                  lineHeight: "46px",
+                  letterSpacing: "-0.025em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": [
+                "16px",
+                { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-sm": [
+                "22px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-sm": [
+                "14px",
+                { lineHeight: "20px", letterSpacing: "0em", fontWeight: "400" },
+              ],
+              "headline-lg-mobile": [
+                "34px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "500",
+                },
+              ],
+              "headline-md": [
+                "32px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "500",
+                },
+              ],
+            },
           },
         },
-      },
-    };
-  </script>
-  <link rel="stylesheet" href="assets/css/site.css" />
-</head>
+      };
+    </script>
+    <link rel="stylesheet" href="site.css" />
+  </head>
 
-<body
-  class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed overflow-x-hidden">
-  <header
-    class="floating-header fixed top-0 left-0 right-0 z-50 pt-4 md:pt-6 px-margin-mobile md:px-margin-tablet lg:px-margin">
-    <div class="top-nav-row max-w-[1280px] mx-auto flex items-center justify-between relative">
-      <a class="nav-logo" data-path="home" href="index.html" aria-label="Progressive home"><img
-          src="assets/images/progressive.png" alt="Progressive" class="nav-logo-img" /></a>
-
-      <nav class="nav-glass-pill hidden md:inline-flex" aria-label="Main">
-        <a aria-current="page" class="nav-pill-link nav-pill-active" data-path="home" href="index.html">Home</a><a
-          class="nav-pill-link" data-path="capabilities" href="pages/capabilities.html">Capabilities</a><a
-          class="nav-pill-link" data-path="our-team" href="pages/our_team.html">Our Team</a><a class="nav-pill-link"
-          data-path="contact" href="pages/contact.html">Contact</a>
-      </nav>
-
-      <a class="nav-pill-cta hidden md:inline-flex" data-path="contact" href="pages/contact.html">Start a Conversation
-        <span class="cta-arrow">&rarr;</span></a>
-
-      <div class="flex md:hidden items-center">
-        <button aria-controls="mobile-nav-drawer" aria-expanded="false" aria-label="Toggle Navigation Menu"
-          class="nav-mobile-toggle" id="mobile-nav-toggle" type="button">
-          <span class="material-symbols-outlined text-[22px]">menu</span>
-        </button>
-      </div>
-    </div>
-
-    <div class="hidden md:hidden mt-3 max-w-[1280px] mx-auto rounded-2xl p-space-lg nav-mobile-drawer"
-      id="mobile-nav-drawer">
-      <nav class="flex flex-col gap-1.5">
-        <a aria-current="page" class="nav-drawer-link nav-drawer-active" data-path="home" href="index.html">Home</a><a
-          class="nav-drawer-link" data-path="capabilities" href="pages/capabilities.html">Capabilities</a><a
-          class="nav-drawer-link" data-path="our-team" href="pages/our_team.html">Our Team</a><a class="nav-drawer-link"
-          data-path="contact" href="pages/contact.html">Contact</a>
-      </nav>
-      <div class="mt-space-md pt-space-md border-t border-slate-200">
-        <a class="nav-pill-cta flex w-full justify-center" data-path="contact" href="pages/contact.html">Start a
-          Conversation <span class="cta-arrow">&rarr;</span></a>
-      </div>
-    </div>
-  </header>
-  <main class="w-full pt-20 md:pt-24 bg-background min-h-screen">
-    <div class="flex flex-col w-full">
-      <!-- SECTION 1: HERO -->
-      <section
-        class="w-full pt-6 md:pt-8 pb-space-2xl border-b border-border bg-background px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <!-- Minimalist Eyebrow Label -->
-          <div class="hero-fade delay-1 mb-space-lg">
-            <span class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant">✦✦✦ Independent
-              Team · Technology · Design</span>
-          </div>
-          <!-- Main Hero: Two-column layout (text left, illustration right) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 xl:gap-8 items-center w-full">
-            <!-- Left Column: Headline, Paragraph, Buttons -->
-            <div class="hero-text-glow-block lg:col-span-5 xl:col-span-4 flex flex-col justify-center min-w-0">
-              <h1
-                class="hero-fade delay-2 text-display-hero-mobile md:text-display-hero text-primary tracking-tight font-medium leading-[1.05]">
-                <span class="font-techno hero-text-move">Move ideas</span><br />
-                <span class="font-telma hero-text-forward">forward.</span>
-              </h1>
-              <p
-                class="hero-fade delay-3 font-body-lg text-body-lg text-on-surface-variant leading-relaxed mt-6 max-w-[460px]">
-                Progressive is an emerging team exploring technology, design,
-                and practical solutions to real-world problems.
-              </p>
-              <div class="hero-fade delay-4 mt-6 flex flex-wrap items-center gap-space-md">
-                <a class="btn-brand-primary inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-                  data-path="capabilities" href="pages/capabilities.html">
-                  Explore Capabilities
-                </a>
-                <a class="btn-brand-secondary inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-                  data-path="our-team" href="pages/our_team.html">
-                  Meet the Team
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Column: SVG Illustration -->
-            <div
-              class="lg:col-span-7 xl:col-span-8 flex items-center justify-center lg:justify-end mt-8 lg:mt-0 w-full min-w-0">
-              <div class="w-full flex items-center justify-center lg:justify-end">
-                <img src="progressive-animated.svg" alt="Progressive services illustration"
-                  class="hero-fade delay-3 w-full h-auto block select-none pointer-events-none"
-                  style="mix-blend-mode: multiply;" />
-              </div>
-            </div>
-          </div>
-          <!-- Visual Metric/Structure Surface Bar (Clean surface panel spanning left to right) -->
-          <div
-            class="hero-fade delay-4 mt-space-3xl w-full metrics-surface-bar bg-white border border-border rounded-xl md:rounded-2xl p-space-md md:p-space-lg shadow-[0_2px_10px_-3px_rgba(15,23,42,0.04),0_1px_2px_rgba(15,23,42,0.02)] grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 divide-y md:divide-y-0 md:divide-x divide-border/60">
-            <div class="flex flex-col justify-center pt-2 md:pt-0">
-              <span class="text-outline block mb-1 font-label-mono-sm text-label-mono-sm">01 / ARCHITECTURE</span>
-              <span class="text-primary font-body-sm text-body-sm font-medium">Resilient & Clean</span>
-            </div>
-            <div class="flex flex-col justify-center pt-3 md:pt-0 md:pl-6">
-              <span class="text-outline block mb-1 font-label-mono-sm text-label-mono-sm">02 / DISCIPLINE</span>
-              <span class="text-primary font-body-sm text-body-sm font-medium">Deliberate Reduction</span>
-            </div>
-            <div class="flex flex-col justify-center pt-3 md:pt-0 md:pl-6">
-              <span class="text-outline block mb-1 font-label-mono-sm text-label-mono-sm">03 / PRAXIS</span>
-              <span class="text-primary font-body-sm text-body-sm font-medium">Grounded Engineering</span>
-            </div>
-            <div class="flex flex-col justify-center pt-3 md:pt-0 md:pl-6">
-              <span class="text-outline block mb-1 font-label-mono-sm text-label-mono-sm">04 / STATUS</span>
-              <span class="text-secondary font-body-sm text-body-sm font-medium flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Active Studio
-              </span>
-            </div>
-          </div>
+  <body
+    class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed"
+  >
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border"
+    >
+      <div
+        class="h-16 max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex items-center justify-between"
+      >
+        <div class="flex items-center gap-space-md">
+          <a
+            class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-primary"
+            data-path="home"
+            href="index.html"
+            ><img
+              src="images/logo.png"
+              alt="Progressive"
+              class="h-6 md:h-7 w-auto object-contain"
+          /></a>
         </div>
-      </section>
-      <!-- SECTION 2: BRAND INTRODUCTION -->
-      <section
-        class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-            <div class="lg:col-span-4">
-              <span class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant">Philosophy &
-                Premise</span>
-              <h2
-                class="mt-space-sm font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight font-medium">
-                Good work starts with clear thinking.
-              </h2>
-            </div>
-            <div class="lg:col-span-7 lg:col-start-6">
-              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-space-lg">
-                We are an emerging multidisciplinary collective. We believe
-                the most effective digital work begins with deep listening,
-                rigorous problem framing, and deliberate reduction. Rather
-                than complicating systems or inflating scope, we focus on
-                simplifying complexity and crafting clear, resilient digital
-                products.
-              </p>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xl pt-space-lg border-t border-border">
-                <div>
-                  <span
-                    class="font-label-mono-sm text-label-mono-sm text-secondary block mb-space-xs font-semibold">HONEST
-                    SCALE</span>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    We do not present inflated agency credentials. We
-                    communicate early-stage capability with quiet intellectual
-                    rigor and execution craft.
-                  </p>
-                </div>
-                <div>
-                  <span
-                    class="font-label-mono-sm text-label-mono-sm text-secondary block mb-space-xs font-semibold">TANGIBLE
-                    UTILITY</span>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    No decorative fluff or ephemeral trends. Software and
-                    design systems constructed to endure through pragmatic,
-                    modular design.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION 3: CAPABILITIES PREVIEW -->
-      <section
-        class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <div
-            class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl pb-space-md border-b border-border gap-space-md">
-            <div>
-              <span
-                class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs">Capabilities
-                Overview</span>
-              <h2
-                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium">
-                What we build
-              </h2>
-            </div>
-            <a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors flex items-center gap-1"
-              data-path="capabilities" href="pages/capabilities.html">
-              <span class="underline underline-offset-4">
-                Detailed capabilities
-              </span>
-              <span class="material-symbols-outlined no-underline text-[16px]">arrow_forward</span>
-            </a>
-          </div>
-          <!-- Anti-Card Editorial List -->
-          <div class="flex flex-col">
-            <!-- 01 -->
-            <a class="editorial-capability-row group border-b border-border py-space-xl px-space-sm"
-              data-path="capabilities" href="pages/capabilities.html#software-dev">
-              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline">
-                <div
-                  class="capability-num md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline transition-colors">
-                  01
-                </div>
-                <div class="md:col-span-4">
-                  <h3
-                    class="capability-title font-headline-sm text-headline-sm text-primary tracking-tight font-medium transition-colors">
-                    Software & Web Development
-                  </h3>
-                </div>
-                <div class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
-                  Websites, web applications, and practical digital tools
-                  built with clean architecture, typed codebases, and
-                  performance-first engineering.
-                </div>
-                <div
-                  class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary">
-                  <span
-                    class="capability-arrow transition-transform duration-150 inline-flex items-center gap-1 font-medium">
-                    Learn more →
-                  </span>
-                </div>
-              </div>
-            </a>
-            <!-- 02 -->
-            <a class="editorial-capability-row group border-b border-border py-space-xl px-space-sm"
-              data-path="capabilities" href="pages/capabilities.html#product-design">
-              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline">
-                <div
-                  class="capability-num md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline transition-colors">
-                  02
-                </div>
-                <div class="md:col-span-4">
-                  <h3
-                    class="capability-title font-headline-sm text-headline-sm text-primary tracking-tight font-medium transition-colors">
-                    UI/UX & Product Design
-                  </h3>
-                </div>
-                <div class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
-                  Interface structure, user flows, design tokens, prototypes,
-                  and usable digital experiences designed with intentional
-                  restraint and typographic clarity.
-                </div>
-                <div
-                  class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary">
-                  <span
-                    class="capability-arrow transition-transform duration-150 inline-flex items-center gap-1 font-medium">
-                    Learn more →
-                  </span>
-                </div>
-              </div>
-            </a>
-            <!-- 03 -->
-            <a class="editorial-capability-row group border-b border-border py-space-xl px-space-sm"
-              data-path="capabilities" href="pages/capabilities.html#systems-automation">
-              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline">
-                <div
-                  class="capability-num md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline transition-colors">
-                  03
-                </div>
-                <div class="md:col-span-4">
-                  <h3
-                    class="capability-title font-headline-sm text-headline-sm text-primary tracking-tight font-medium transition-colors">
-                    Business Systems & Automation
-                  </h3>
-                </div>
-                <div class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
-                  Tailored internal tools, API synchronizations, and
-                  operational workflows that eliminate repetitive friction and
-                  organize critical institutional information.
-                </div>
-                <div
-                  class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary">
-                  <span
-                    class="capability-arrow transition-transform duration-150 inline-flex items-center gap-1 font-medium">
-                    Learn more →
-                  </span>
-                </div>
-              </div>
-            </a>
-            <!-- 04 -->
-            <a class="editorial-capability-row group border-b border-border py-space-xl px-space-sm"
-              data-path="capabilities" href="pages/capabilities.html#research-prototyping">
-              <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline">
-                <div
-                  class="capability-num md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline transition-colors">
-                  04
-                </div>
-                <div class="md:col-span-4">
-                  <h3
-                    class="capability-title font-headline-sm text-headline-sm text-primary tracking-tight font-medium transition-colors">
-                    Research & Prototyping
-                  </h3>
-                </div>
-                <div class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed">
-                  Rapid functional tests, technical spikes, feasibility
-                  assays, and assumption-testing sandbox builds to derisk
-                  complex investments before production.
-                </div>
-                <div
-                  class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary">
-                  <span
-                    class="capability-arrow transition-transform duration-150 inline-flex items-center gap-1 font-medium">
-                    Learn more →
-                  </span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION 4: WORKING APPROACH -->
-      <section
-        class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <div class="max-w-3xl mb-space-3xl">
-            <span
-              class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs">Our
-              Process</span>
-            <h2
-              class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium mb-space-sm">
-              How we approach a problem
-            </h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Framed as an evolving studio practice, grounded in curiosity and
-              pragmatic execution.
-            </p>
-          </div>
-          <!-- 3-Column Stepped Index -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            <div class="pt-space-lg border-t border-border flex flex-col justify-between h-full">
-              <div>
-                <div class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md">
-                  STAGE 01
-                </div>
-                <h3 class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm">
-                  01 — Understand
-                </h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Clarify the fundamental problem, users, constraints, and
-                  intended outcomes before touching any code. We prioritize
-                  shared reality over unvetted assumptions.
-                </p>
-              </div>
-              <div class="pt-space-xl mt-space-xl border-t border-border/60">
-                <span
-                  class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block">Deliverable</span>
-                <span class="font-body-sm text-body-sm text-on-surface font-medium">Problem Thesis & Functional
-                  Spec</span>
-              </div>
-            </div>
-            <div class="pt-space-lg border-t border-border flex flex-col justify-between h-full">
-              <div>
-                <div class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md">
-                  STAGE 02
-                </div>
-                <h3 class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm">
-                  02 — Explore
-                </h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Consider possible solution spaces, test technical
-                  feasibility, and define a practical, focused direction
-                  through clickable wireframes and functional
-                  proof-of-concepts.
-                </p>
-              </div>
-              <div class="pt-space-xl mt-space-xl border-t border-border/60">
-                <span
-                  class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block">Deliverable</span>
-                <span class="font-body-sm text-body-sm text-on-surface font-medium">Architecture Plan & Interactive
-                  Prototype</span>
-              </div>
-            </div>
-            <div class="pt-space-lg border-t border-border flex flex-col justify-between h-full">
-              <div>
-                <div class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md">
-                  STAGE 03
-                </div>
-                <h3 class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm">
-                  03 — Build
-                </h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Develop, test, and refine a lean, robust solution designed
-                  to adapt as your needs evolve. Complete handover with
-                  documentation and clean source control.
-                </p>
-              </div>
-              <div class="pt-space-xl mt-space-xl border-t border-border/60">
-                <span
-                  class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block">Deliverable</span>
-                <span class="font-body-sm text-body-sm text-on-surface font-medium">Production Software & System
-                  Docs</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION 5: TEAM PREVIEW -->
-      <section
-        class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <div
-            class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-space-2xl pb-space-lg border-b border-border items-end">
-            <div class="lg:col-span-5">
-              <span
-                class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs">The
-                Team</span>
-              <h2
-                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium">
-                A small, dedicated group.
-              </h2>
-            </div>
-            <div class="lg:col-span-7 flex flex-col md:flex-row md:items-end justify-between gap-space-md">
-              <p class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed">
-                An honest early-stage team bringing together engineering,
-                design, and systems thinking.
-              </p>
-              <a class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors underline underline-offset-4 whitespace-nowrap"
-                data-path="our-team" href="pages/our_team.html">
-                View full team & philosophy →
-              </a>
-            </div>
-          </div>
-          <!-- Team Members Typographic Row Matrix -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            <!-- Member 1 -->
-            <div class="team-portrait-card flex flex-col group cursor-pointer">
-              <div
-                class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border rounded-lg">
-                <img alt="Founding Lead Portrait" class="w-full h-full object-cover grayscale contrast-125"
-                  data-alt="Monochrome 35mm editorial portrait of a technical founder with calm posture in an airy architectural studio with soft daylight and concrete surfaces."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_EvMer3hoWlEkVcqFkdh4GAjtz_F7agSZqCEX-Dpf0W8HF-eP75f8tMiOAWREtdcM26lPD81p0g62lNcCkM0976l1dYL8DUa1HG7jQkuwYddwjkqJsJ9CIn4XwgnaHrb6mqu8onI79yNjFyUwOh4AYy-UNG4yB8X95sO9yt5yaZlLQ4teHSev1Y_Jpmyk7iol3HJuC2VuGA5lclNXznfsX1GyJmN44zRm_DAbtBcUa5seEAvK3Fns" />
-              </div>
-              <div class="pt-space-sm border-t border-border">
-                <div class="flex items-baseline justify-between mb-space-xs">
-                  <span class="team-name font-headline-sm text-headline-sm text-primary tracking-tight font-medium">Elena
-                    Rostova</span>
-                  <span class="font-label-mono-sm text-label-mono-sm text-outline">01</span>
-                </div>
-                <p class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs">
-                  Systems & Architecture
-                </p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Focuses on resilient backends, distributed data flows, and
-                  infrastructure clarity. Former platform developer.
-                </p>
-              </div>
-            </div>
-            <!-- Member 2 -->
-            <div class="team-portrait-card flex flex-col group cursor-pointer">
-              <div
-                class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border rounded-lg">
-                <img alt="Interface Designer Portrait" class="w-full h-full object-cover grayscale contrast-125"
-                  data-alt="High-contrast black-and-white minimalist portrait of a product designer in a structured black knit sweater with natural window lighting."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVC25q7O8l3rGWE0Yk8bGQRex2-mz273i2x2BYYue7kSz-BLyY6Y1vY7B4myVF8rrvx_HEsqnXx1Ucq3-3nDfxBUVRHl3PTv5wmck0w5WkHe0XGkGeNrsXTRYhxFFFppnCrUT4UsM4jfcNQ8mndKYJLzeRnNlSbg917EEQIdSIFqXEXqsKBwMNq2ClRURlppNxmRfUmJb6POm_HRU5k6TzxKfbZ-9n54IZb7ySQn69Jw116Va4GVJ1" />
-              </div>
-              <div class="pt-space-sm border-t border-border">
-                <div class="flex items-baseline justify-between mb-space-xs">
-                  <span class="team-name font-headline-sm text-headline-sm text-primary tracking-tight font-medium">Julian
-                    Vance</span>
-                  <span class="font-label-mono-sm text-label-mono-sm text-outline">02</span>
-                </div>
-                <p class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs">
-                  Interface & Interaction
-                </p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Directs typography hierarchy, typographic rhythm, spatial
-                  systems, and usable product design.
-                </p>
-              </div>
-            </div>
-            <!-- Member 3 -->
-            <div class="team-portrait-card flex flex-col group cursor-pointer">
-              <div
-                class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border rounded-lg">
-                <img alt="Engineer Portrait" class="w-full h-full object-cover grayscale contrast-125"
-                  data-alt="Editorial candid black and white portrait of a software engineer reviewing architectural schematics in a naturally lit industrial workspace."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxmdq6VDps2z7xAL10Bx66ka-aeHanZmVu5NqGJpfI8sub-x4JCtfzG9QwLBLxlVxwdj-edQ8zcQ8BIts2KuQ5vJLZFrty2vnwcoQcDKcJTcxPvik2oTwy3Hax26myg3gFstGBmUb24PwDwGKCY5d0YiskWEIIYk3P1gvO9ugd-J-BQ51n-wkd5Sm__9BrkvoWhO-H8fZ8XPm0_5fWGwrgwAxEnRjXFgr9RLQOc-VtnjsfL1UDcpUD" />
-              </div>
-              <div class="pt-space-sm border-t border-border">
-                <div class="flex items-baseline justify-between mb-space-xs">
-                  <span class="team-name font-headline-sm text-headline-sm text-primary tracking-tight font-medium">Marcus
-                    Chen</span>
-                  <span class="font-label-mono-sm text-label-mono-sm text-outline">03</span>
-                </div>
-                <p class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs">
-                  Web Engineering & Tools
-                </p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Specializes in lean frontend performance, internal tooling,
-                  and pragmatic script automation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION 6: CLOSING CALL-TO-ACTION -->
-      <section
-        class="reveal-on-scroll w-full py-space-3xl bg-dark-section text-dark-text px-margin-mobile md:px-margin-tablet lg:px-margin">
-        <div class="max-w-[1280px] mx-auto w-full">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-            <div class="lg:col-span-8">
-              <div
-                class="flex items-center gap-space-sm mb-space-md font-label-mono-sm text-label-mono-sm text-secondary-fixed-dim">
-                <span>// OPEN FOR SELECT COMMISSIONS</span>
-              </div>
-              <h2
-                class="font-display-hero text-display-hero-mobile md:text-display-hero tracking-tight font-medium mb-space-md text-dark-text leading-[1.1]">
-                Have an idea to<br class="hidden sm:inline" />
-                move forward?
-              </h2>
-              <p class="font-body-lg text-body-lg text-neutral-400 max-w-xl leading-relaxed mb-space-xl">
-                Let's start a conversation about an idea, an opportunity, or a
-                problem worth solving.
-              </p>
-              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-md">
-                <a class="cta-button-light inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg font-body-sm text-body-sm font-medium focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim"
-                  data-path="contact" href="pages/contact.html">
-                  Start a Conversation
-                </a>
-                <a class="cta-email-link inline-flex items-center justify-center sm:justify-start px-space-lg py-space-sm rounded-lg border border-neutral-700 text-neutral-300 font-label-mono-sm text-label-mono-sm"
-                  href="mailto:hello@progressive.studio">
-                  hello@progressive.studio
-                </a>
-              </div>
-            </div>
-            <div
-              class="lg:col-span-4 mt-space-2xl lg:mt-0 flex flex-col justify-end border-t lg:border-t-0 lg:border-l border-neutral-800 pt-space-lg lg:pt-0 lg:pl-space-xl">
-              <div class="space-y-space-md">
-                <div>
-                  <span
-                    class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1">AVAILABILITY</span>
-                  <p class="font-body-sm text-body-sm text-neutral-300">
-                    Q2 — Q3 2025 inquiries open
-                  </p>
-                </div>
-                <div>
-                  <span
-                    class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1">ENGAGEMENT
-                    MODEL</span>
-                  <p class="font-body-sm text-body-sm text-neutral-300">
-                    Milestone-driven cycles or embedded technical advisory
-                  </p>
-                </div>
-                <div>
-                  <span class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1">RESPONSE
-                    CADENCE</span>
-                  <p class="font-body-sm text-body-sm text-neutral-300">
-                    Replies usually within 2 business days
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer
-    class="w-full bg-background border-t border-border pt-space-2xl pb-space-xl px-margin-mobile md:px-margin-tablet lg:px-margin">
-    <div class="max-w-[1280px] mx-auto w-full">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-2xl">
-        <div class="md:col-span-5 flex flex-col gap-space-sm">
-          <div class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium">
-            Progressive
-          </div>
-          <p class="font-body-sm text-body-sm text-secondary font-medium">
-            Move ideas forward.
-          </p>
-          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs leading-relaxed">
-            An emerging team exploring technology, design, and practical
-            solutions to real-world problems.
-          </p>
-        </div>
-        <div class="md:col-span-3 md:col-start-8 flex flex-col gap-space-sm">
-          <span
-            class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Navigation</span>
-          <nav class="flex flex-col gap-space-xs" data-active-classes="text-primary font-medium">
-            <a aria-current="page" class="transition-colors duration-150 text-primary font-medium" data-path="home"
-              href="index.html">Home</a><a
+        <div class="hidden md:flex items-center gap-space-lg">
+          <nav
+            class="flex items-center gap-space-lg"
+            data-active-classes="text-primary font-medium underline underline-offset-4 decoration-1"
+          >
+            <a
+              aria-current="page"
+              class="transition-colors duration-150 text-primary font-medium underline underline-offset-4 decoration-1"
+              data-path="home"
+              href="index.html"
+              >Home</a
+            ><a
               class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="capabilities" href="pages/capabilities.html">Capabilities</a><a
+              data-path="capabilities"
+              href="capabilities.html"
+              >Capabilities</a
+            ><a
               class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="our-team" href="pages/our_team.html">Our Team</a><a
+              data-path="our-team"
+              href="our_team.html"
+              >Our Team</a
+            ><a
               class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
-              data-path="contact" href="pages/contact.html">Contact</a>
+              data-path="contact"
+              href="contact.html"
+              >Contact</a
+            >
           </nav>
+          <div class="h-4 w-[1px] bg-border"></div>
+          <a
+            class="px-space-md py-space-xs rounded-lg border border-primary text-primary font-body-sm text-body-sm hover:bg-dark-section hover:text-on-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+            data-path="contact"
+            href="contact.html"
+            >Start a Conversation</a
+          >
         </div>
-        <div class="md:col-span-2 flex flex-col gap-space-sm">
-          <span
-            class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs">Practice</span>
-          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Independent studio focusing on software craft, system
-            architecture, and product inquiry.
-          </p>
+        <div class="flex md:hidden items-center gap-space-sm">
+          <button
+            aria-controls="mobile-nav-drawer"
+            aria-expanded="false"
+            aria-label="Toggle Navigation Menu"
+            class="p-space-xs text-on-surface hover:text-primary focus:outline-none"
+            id="mobile-nav-toggle"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-[24px]">menu</span>
+          </button>
         </div>
       </div>
       <div
-        class="pt-space-lg border-t border-border flex flex-col sm:flex-row items-baseline justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
-        <div>© 2025 Progressive. All rights reserved.</div>
-        <div class="font-label-mono-sm text-label-mono-sm text-outline">
-          Built with quiet precision.
+        class="hidden md:hidden border-b border-border bg-background px-margin-mobile py-space-lg"
+        id="mobile-nav-drawer"
+      >
+        <nav
+          class="flex flex-col gap-space-md"
+          data-active-classes="text-primary font-medium underline underline-offset-4"
+        >
+          <a
+            aria-current="page"
+            class="transition-colors text-primary font-medium underline underline-offset-4"
+            data-path="home"
+            href="index.html"
+            >Home</a
+          ><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            data-path="capabilities"
+            href="capabilities.html"
+            >Capabilities</a
+          ><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            data-path="our-team"
+            href="our_team.html"
+            >Our Team</a
+          ><a
+            class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+            data-path="contact"
+            href="contact.html"
+            >Contact</a
+          >
+        </nav>
+        <div class="mt-space-lg pt-space-md border-t border-border">
+          <a
+            class="inline-block w-full text-center px-space-md py-space-sm rounded-lg border border-primary bg-primary text-on-primary font-body-sm text-body-sm hover:bg-dark-section transition-colors"
+            data-path="contact"
+            href="contact.html"
+            >Start a Conversation</a
+          >
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="assets/js/site.js"></script>
-</body>
-
+    </header>
+    <main class="w-full pt-16 bg-background min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- SECTION 1: HERO -->
+        <section
+          class="w-full pt-space-2xl md:pt-space-3xl pb-space-2xl border-b border-border bg-background"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <!-- Minimalist Structural Coordinates & Eyebrow Bar -->
+            <div
+              class="hero-fade delay-1 flex items-center justify-between pb-space-lg mb-space-2xl border-b border-border"
+            >
+              <span
+                class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant"
+                >// Independent Team · Technology · Design</span
+              >
+              <div
+                class="hidden sm:flex items-center gap-space-md font-label-mono-sm text-label-mono-sm text-outline"
+              >
+                <span>LOC 37.7749° N / 122.4194° W</span>
+                <span class="text-border">/</span>
+                <span>EST. 2025</span>
+              </div>
+            </div>
+            <!-- Main Typographic Hook -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-baseline"
+            >
+              <div class="lg:col-span-8">
+                <h1
+                  class="hero-fade delay-2 font-display-hero text-display-hero-mobile md:text-display-hero text-primary tracking-tight font-medium leading-[1.05]"
+                >
+                  Move ideas<br />forward.
+                </h1>
+              </div>
+              <div
+                class="lg:col-span-4 mt-space-lg lg:mt-0 flex flex-col justify-end"
+              >
+                <p
+                  class="hero-fade delay-3 font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+                >
+                  Progressive is an emerging team exploring technology, design,
+                  and practical solutions to real-world problems.
+                </p>
+                <div
+                  class="hero-fade delay-4 pt-space-lg flex flex-wrap items-center gap-space-md"
+                >
+                  <a
+                    class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg bg-dark-section text-dark-text font-body-sm text-body-sm hover:bg-neutral-800 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                    data-path="capabilities"
+                    href="capabilities.html"
+                  >
+                    Explore Capabilities
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center px-space-lg py-space-sm rounded-lg border border-border text-primary font-body-sm text-body-sm hover:bg-surface hover:border-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                    data-path="our-team"
+                    href="our_team.html"
+                  >
+                    Meet the Team
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Visual Metric/Structure Divider -->
+            <div
+              class="hero-fade delay-4 mt-space-3xl pt-space-md border-t border-border grid grid-cols-2 md:grid-cols-4 gap-gutter text-on-surface-variant font-label-mono-sm text-label-mono-sm"
+            >
+              <div>
+                <span class="text-outline block mb-1">01 / ARCHITECTURE</span>
+                <span class="text-primary font-body-sm text-body-sm"
+                  >Resilient & Clean</span
+                >
+              </div>
+              <div>
+                <span class="text-outline block mb-1">02 / DISCIPLINE</span>
+                <span class="text-primary font-body-sm text-body-sm"
+                  >Deliberate Reduction</span
+                >
+              </div>
+              <div>
+                <span class="text-outline block mb-1">03 / PRAXIS</span>
+                <span class="text-primary font-body-sm text-body-sm"
+                  >Grounded Engineering</span
+                >
+              </div>
+              <div>
+                <span class="text-outline block mb-1">04 / STATUS</span>
+                <span
+                  class="text-secondary font-body-sm text-body-sm flex items-center gap-1.5"
+                >
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active Studio
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 2: BRAND INTRODUCTION -->
+        <section
+          class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+              <div class="lg:col-span-4">
+                <span
+                  class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant"
+                  >Philosophy & Premise</span
+                >
+                <h2
+                  class="mt-space-sm font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight font-medium"
+                >
+                  Good work starts with clear thinking.
+                </h2>
+              </div>
+              <div class="lg:col-span-7 lg:col-start-6">
+                <p
+                  class="font-body-lg text-body-lg text-on-surface leading-relaxed mb-space-lg"
+                >
+                  We are an emerging multidisciplinary collective. We believe
+                  the most effective digital work begins with deep listening,
+                  rigorous problem framing, and deliberate reduction. Rather
+                  than complicating systems or inflating scope, we focus on
+                  simplifying complexity and crafting clear, resilient digital
+                  products.
+                </p>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-space-xl pt-space-lg border-t border-border"
+                >
+                  <div>
+                    <span
+                      class="font-label-mono-sm text-label-mono-sm text-secondary block mb-space-xs font-semibold"
+                      >HONEST SCALE</span
+                    >
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      We do not present inflated agency credentials. We
+                      communicate early-stage capability with quiet intellectual
+                      rigor and execution craft.
+                    </p>
+                  </div>
+                  <div>
+                    <span
+                      class="font-label-mono-sm text-label-mono-sm text-secondary block mb-space-xs font-semibold"
+                      >TANGIBLE UTILITY</span
+                    >
+                    <p
+                      class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                    >
+                      No decorative fluff or ephemeral trends. Software and
+                      design systems constructed to endure through pragmatic,
+                      modular design.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 3: CAPABILITIES PREVIEW -->
+        <section
+          class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl pb-space-md border-b border-border gap-space-md"
+            >
+              <div>
+                <span
+                  class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs"
+                  >Capabilities Overview</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium"
+                >
+                  What we build
+                </h2>
+              </div>
+              <a
+                class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors flex items-center gap-1"
+                data-path="capabilities"
+                href="capabilities.html"
+              >
+                <span class="underline underline-offset-4">
+                  Detailed capabilities
+                </span>
+                <span class="material-symbols-outlined no-underline text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+            <!-- Anti-Card Editorial List -->
+            <div class="flex flex-col">
+              <!-- 01 -->
+              <a
+                class="group border-b border-border py-space-xl px-space-sm hover:bg-surface transition-colors duration-150"
+                data-path="capabilities"
+                href="capabilities.html#software-dev"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline"
+                >
+                  <div
+                    class="md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline group-hover:text-primary transition-colors"
+                  >
+                    01
+                  </div>
+                  <div class="md:col-span-4">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium group-hover:text-secondary transition-colors"
+                    >
+                      Software & Web Development
+                    </h3>
+                  </div>
+                  <div
+                    class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed"
+                  >
+                    Websites, web applications, and practical digital tools
+                    built with clean architecture, typed codebases, and
+                    performance-first engineering.
+                  </div>
+                  <div
+                    class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary"
+                  >
+                    <span
+                      class="group-hover:translate-x-1 transition-transform duration-150 inline-flex items-center gap-1 font-medium"
+                    >
+                      Learn more →
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!-- 02 -->
+              <a
+                class="group border-b border-border py-space-xl px-space-sm hover:bg-surface transition-colors duration-150"
+                data-path="capabilities"
+                href="capabilities.html#product-design"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline"
+                >
+                  <div
+                    class="md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline group-hover:text-primary transition-colors"
+                  >
+                    02
+                  </div>
+                  <div class="md:col-span-4">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium group-hover:text-secondary transition-colors"
+                    >
+                      UI/UX & Product Design
+                    </h3>
+                  </div>
+                  <div
+                    class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed"
+                  >
+                    Interface structure, user flows, design tokens, prototypes,
+                    and usable digital experiences designed with intentional
+                    restraint and typographic clarity.
+                  </div>
+                  <div
+                    class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary"
+                  >
+                    <span
+                      class="group-hover:translate-x-1 transition-transform duration-150 inline-flex items-center gap-1 font-medium"
+                    >
+                      Learn more →
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!-- 03 -->
+              <a
+                class="group border-b border-border py-space-xl px-space-sm hover:bg-surface transition-colors duration-150"
+                data-path="capabilities"
+                href="capabilities.html#systems-automation"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline"
+                >
+                  <div
+                    class="md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline group-hover:text-primary transition-colors"
+                  >
+                    03
+                  </div>
+                  <div class="md:col-span-4">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium group-hover:text-secondary transition-colors"
+                    >
+                      Business Systems & Automation
+                    </h3>
+                  </div>
+                  <div
+                    class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed"
+                  >
+                    Tailored internal tools, API synchronizations, and
+                    operational workflows that eliminate repetitive friction and
+                    organize critical institutional information.
+                  </div>
+                  <div
+                    class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary"
+                  >
+                    <span
+                      class="group-hover:translate-x-1 transition-transform duration-150 inline-flex items-center gap-1 font-medium"
+                    >
+                      Learn more →
+                    </span>
+                  </div>
+                </div>
+              </a>
+              <!-- 04 -->
+              <a
+                class="group border-b border-border py-space-xl px-space-sm hover:bg-surface transition-colors duration-150"
+                data-path="capabilities"
+                href="capabilities.html#research-prototyping"
+              >
+                <div
+                  class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline"
+                >
+                  <div
+                    class="md:col-span-1 font-label-mono-sm text-label-mono-sm text-outline group-hover:text-primary transition-colors"
+                  >
+                    04
+                  </div>
+                  <div class="md:col-span-4">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium group-hover:text-secondary transition-colors"
+                    >
+                      Research & Prototyping
+                    </h3>
+                  </div>
+                  <div
+                    class="md:col-span-5 text-on-surface-variant font-body-sm text-body-sm leading-relaxed"
+                  >
+                    Rapid functional tests, technical spikes, feasibility
+                    assays, and assumption-testing sandbox builds to derisk
+                    complex investments before production.
+                  </div>
+                  <div
+                    class="md:col-span-2 flex justify-start md:justify-end items-center mt-space-sm md:mt-0 font-body-sm text-body-sm text-secondary"
+                  >
+                    <span
+                      class="group-hover:translate-x-1 transition-transform duration-150 inline-flex items-center gap-1 font-medium"
+                    >
+                      Learn more →
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 4: WORKING APPROACH -->
+        <section
+          class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <div class="max-w-3xl mb-space-3xl">
+              <span
+                class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs"
+                >Our Process</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium mb-space-sm"
+              >
+                How we approach a problem
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed"
+              >
+                Framed as an evolving studio practice, grounded in curiosity and
+                pragmatic execution.
+              </p>
+            </div>
+            <!-- 3-Column Stepped Index -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+              <div
+                class="pt-space-lg border-t border-border flex flex-col justify-between h-full"
+              >
+                <div>
+                  <div
+                    class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md"
+                  >
+                    STAGE 01
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm"
+                  >
+                    01 — Understand
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Clarify the fundamental problem, users, constraints, and
+                    intended outcomes before touching any code. We prioritize
+                    shared reality over unvetted assumptions.
+                  </p>
+                </div>
+                <div class="pt-space-xl mt-space-xl border-t border-border/60">
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block"
+                    >Deliverable</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface font-medium"
+                    >Problem Thesis & Functional Spec</span
+                  >
+                </div>
+              </div>
+              <div
+                class="pt-space-lg border-t border-border flex flex-col justify-between h-full"
+              >
+                <div>
+                  <div
+                    class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md"
+                  >
+                    STAGE 02
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm"
+                  >
+                    02 — Explore
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Consider possible solution spaces, test technical
+                    feasibility, and define a practical, focused direction
+                    through clickable wireframes and functional
+                    proof-of-concepts.
+                  </p>
+                </div>
+                <div class="pt-space-xl mt-space-xl border-t border-border/60">
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block"
+                    >Deliverable</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface font-medium"
+                    >Architecture Plan & Interactive Prototype</span
+                  >
+                </div>
+              </div>
+              <div
+                class="pt-space-lg border-t border-border flex flex-col justify-between h-full"
+              >
+                <div>
+                  <div
+                    class="font-label-mono-sm text-label-mono-sm text-outline mb-space-md"
+                  >
+                    STAGE 03
+                  </div>
+                  <h3
+                    class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium mb-space-sm"
+                  >
+                    03 — Build
+                  </h3>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Develop, test, and refine a lean, robust solution designed
+                    to adapt as your needs evolve. Complete handover with
+                    documentation and clean source control.
+                  </p>
+                </div>
+                <div class="pt-space-xl mt-space-xl border-t border-border/60">
+                  <span
+                    class="font-label-mono-sm text-label-mono-sm text-secondary uppercase tracking-wider block"
+                    >Deliverable</span
+                  >
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface font-medium"
+                    >Production Software & System Docs</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 5: TEAM PREVIEW -->
+        <section
+          class="reveal-on-scroll w-full py-space-2xl md:py-space-3xl border-b border-border bg-background"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-space-2xl pb-space-lg border-b border-border items-end"
+            >
+              <div class="lg:col-span-5">
+                <span
+                  class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant block mb-space-xs"
+                  >The Team</span
+                >
+                <h2
+                  class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tight font-medium"
+                >
+                  A small, dedicated group.
+                </h2>
+              </div>
+              <div
+                class="lg:col-span-7 flex flex-col md:flex-row md:items-end justify-between gap-space-md"
+              >
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-md leading-relaxed"
+                >
+                  An honest early-stage team bringing together engineering,
+                  design, and systems thinking.
+                </p>
+                <a
+                  class="font-body-sm text-body-sm text-secondary hover:text-primary transition-colors underline underline-offset-4 whitespace-nowrap"
+                  data-path="our-team"
+                  href="our_team.html"
+                >
+                  View full team & philosophy →
+                </a>
+              </div>
+            </div>
+            <!-- Team Members Typographic Row Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+              <!-- Member 1 -->
+              <div class="flex flex-col group">
+                <div
+                  class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border"
+                >
+                  <img
+                    alt="Founding Lead Portrait"
+                    class="w-full h-full object-cover grayscale contrast-125"
+                    data-alt="Monochrome 35mm editorial portrait of a technical founder with calm posture in an airy architectural studio with soft daylight and concrete surfaces."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_EvMer3hoWlEkVcqFkdh4GAjtz_F7agSZqCEX-Dpf0W8HF-eP75f8tMiOAWREtdcM26lPD81p0g62lNcCkM0976l1dYL8DUa1HG7jQkuwYddwjkqJsJ9CIn4XwgnaHrb6mqu8onI79yNjFyUwOh4AYy-UNG4yB8X95sO9yt5yaZlLQ4teHSev1Y_Jpmyk7iol3HJuC2VuGA5lclNXznfsX1GyJmN44zRm_DAbtBcUa5seEAvK3Fns"
+                  />
+                </div>
+                <div class="pt-space-sm border-t border-border">
+                  <div class="flex items-baseline justify-between mb-space-xs">
+                    <span
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium"
+                      >Elena Rostova</span
+                    >
+                    <span
+                      class="font-label-mono-sm text-label-mono-sm text-outline"
+                      >01</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs"
+                  >
+                    Systems & Architecture
+                  </p>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Focuses on resilient backends, distributed data flows, and
+                    infrastructure clarity. Former platform developer.
+                  </p>
+                </div>
+              </div>
+              <!-- Member 2 -->
+              <div class="flex flex-col group">
+                <div
+                  class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border"
+                >
+                  <img
+                    alt="Interface Designer Portrait"
+                    class="w-full h-full object-cover grayscale contrast-125"
+                    data-alt="High-contrast black-and-white minimalist portrait of a product designer in a structured black knit sweater with natural window lighting."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVC25q7O8l3rGWE0Yk8bGQRex2-mz273i2x2BYYue7kSz-BLyY6Y1vY7B4myVF8rrvx_HEsqnXx1Ucq3-3nDfxBUVRHl3PTv5wmck0w5WkHe0XGkGeNrsXTRYhxFFFppnCrUT4UsM4jfcNQ8mndKYJLzeRnNlSbg917EEQIdSIFqXEXqsKBwMNq2ClRURlppNxmRfUmJb6POm_HRU5k6TzxKfbZ-9n54IZb7ySQn69Jw116Va4GVJ1"
+                  />
+                </div>
+                <div class="pt-space-sm border-t border-border">
+                  <div class="flex items-baseline justify-between mb-space-xs">
+                    <span
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium"
+                      >Julian Vance</span
+                    >
+                    <span
+                      class="font-label-mono-sm text-label-mono-sm text-outline"
+                      >02</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs"
+                  >
+                    Interface & Interaction
+                  </p>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Directs typography hierarchy, typographic rhythm, spatial
+                    systems, and usable product design.
+                  </p>
+                </div>
+              </div>
+              <!-- Member 3 -->
+              <div class="flex flex-col group">
+                <div
+                  class="portrait-container w-full aspect-[4/5] bg-surface-container mb-space-md overflow-hidden border border-border"
+                >
+                  <img
+                    alt="Engineer Portrait"
+                    class="w-full h-full object-cover grayscale contrast-125"
+                    data-alt="Editorial candid black and white portrait of a software engineer reviewing architectural schematics in a naturally lit industrial workspace."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxmdq6VDps2z7xAL10Bx66ka-aeHanZmVu5NqGJpfI8sub-x4JCtfzG9QwLBLxlVxwdj-edQ8zcQ8BIts2KuQ5vJLZFrty2vnwcoQcDKcJTcxPvik2oTwy3Hax26myg3gFstGBmUb24PwDwGKCY5d0YiskWEIIYk3P1gvO9ugd-J-BQ51n-wkd5Sm__9BrkvoWhO-H8fZ8XPm0_5fWGwrgwAxEnRjXFgr9RLQOc-VtnjsfL1UDcpUD"
+                  />
+                </div>
+                <div class="pt-space-sm border-t border-border">
+                  <div class="flex items-baseline justify-between mb-space-xs">
+                    <span
+                      class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium"
+                      >Marcus Chen</span
+                    >
+                    <span
+                      class="font-label-mono-sm text-label-mono-sm text-outline"
+                      >03</span
+                    >
+                  </div>
+                  <p
+                    class="font-body-sm text-body-sm text-secondary font-medium mb-space-xs"
+                  >
+                    Web Engineering & Tools
+                  </p>
+                  <p
+                    class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+                  >
+                    Specializes in lean frontend performance, internal tooling,
+                    and pragmatic script automation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 6: CLOSING CALL-TO-ACTION -->
+        <section
+          class="reveal-on-scroll w-full py-space-3xl bg-dark-section text-dark-text"
+        >
+          <div
+            class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+          >
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center"
+            >
+              <div class="lg:col-span-8">
+                <div
+                  class="flex items-center gap-space-sm mb-space-md font-label-mono-sm text-label-mono-sm text-secondary-fixed-dim"
+                >
+                  <span>// OPEN FOR SELECT COMMISSIONS</span>
+                </div>
+                <h2
+                  class="font-display-hero text-display-hero-mobile md:text-display-hero tracking-tight font-medium mb-space-md text-dark-text leading-[1.1]"
+                >
+                  Have an idea to<br class="hidden sm:inline" />
+                  move forward?
+                </h2>
+                <p
+                  class="font-body-lg text-body-lg text-neutral-400 max-w-xl leading-relaxed mb-space-xl"
+                >
+                  Let's start a conversation about an idea, an opportunity, or a
+                  problem worth solving.
+                </p>
+                <div
+                  class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-md"
+                >
+                  <a
+                    class="inline-flex items-center justify-center px-space-xl py-space-sm rounded-lg bg-background text-on-background font-body-sm text-body-sm font-medium hover:bg-surface-container transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-secondary-fixed-dim"
+                    data-path="contact"
+                    href="contact.html"
+                  >
+                    Start a Conversation
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center sm:justify-start px-space-lg py-space-sm rounded-lg border border-neutral-700 text-neutral-300 font-label-mono-sm text-label-mono-sm hover:border-neutral-500 hover:text-dark-text transition-colors duration-150"
+                    href="mailto:hello@progressive.studio"
+                  >
+                    hello@progressive.studio
+                  </a>
+                </div>
+              </div>
+              <div
+                class="lg:col-span-4 mt-space-2xl lg:mt-0 flex flex-col justify-end border-t lg:border-t-0 lg:border-l border-neutral-800 pt-space-lg lg:pt-0 lg:pl-space-xl"
+              >
+                <div class="space-y-space-md">
+                  <div>
+                    <span
+                      class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1"
+                      >AVAILABILITY</span
+                    >
+                    <p class="font-body-sm text-body-sm text-neutral-300">
+                      Q2 — Q3 2025 inquiries open
+                    </p>
+                  </div>
+                  <div>
+                    <span
+                      class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1"
+                      >ENGAGEMENT MODEL</span
+                    >
+                    <p class="font-body-sm text-body-sm text-neutral-300">
+                      Milestone-driven cycles or embedded technical advisory
+                    </p>
+                  </div>
+                  <div>
+                    <span
+                      class="font-eyebrow text-eyebrow uppercase tracking-widest text-neutral-500 block mb-1"
+                      >RESPONSE CADENCE</span
+                    >
+                    <p class="font-body-sm text-body-sm text-neutral-300">
+                      Replies usually within 2 business days
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-background border-t border-border pt-space-2xl pb-space-xl"
+    >
+      <div
+        class="max-w-[1280px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-space-2xl">
+          <div class="md:col-span-5 flex flex-col gap-space-sm">
+            <div
+              class="font-headline-sm text-headline-sm text-primary tracking-tight font-medium"
+            >
+              Progressive
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary font-medium">
+              Move ideas forward.
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant max-w-sm mt-space-xs leading-relaxed"
+            >
+              An emerging team exploring technology, design, and practical
+              solutions to real-world problems.
+            </p>
+          </div>
+          <div class="md:col-span-3 md:col-start-8 flex flex-col gap-space-sm">
+            <span
+              class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs"
+              >Navigation</span
+            >
+            <nav
+              class="flex flex-col gap-space-xs"
+              data-active-classes="text-primary font-medium"
+            >
+              <a
+                aria-current="page"
+                class="transition-colors duration-150 text-primary font-medium"
+                data-path="home"
+                href="index.html"
+                >Home</a
+              ><a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+                data-path="capabilities"
+                href="capabilities.html"
+                >Capabilities</a
+              ><a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+                data-path="our-team"
+                href="our_team.html"
+                >Our Team</a
+              ><a
+                class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150"
+                data-path="contact"
+                href="contact.html"
+                >Contact</a
+              >
+            </nav>
+          </div>
+          <div class="md:col-span-2 flex flex-col gap-space-sm">
+            <span
+              class="font-eyebrow text-eyebrow uppercase tracking-widest text-on-surface-variant mb-space-xs"
+              >Practice</span
+            >
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed"
+            >
+              Independent studio focusing on software craft, system
+              architecture, and product inquiry.
+            </p>
+          </div>
+        </div>
+        <div
+          class="pt-space-lg border-t border-border flex flex-col sm:flex-row items-baseline justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm"
+        >
+          <div>© 2025 Progressive. All rights reserved.</div>
+          <div class="font-label-mono-sm text-label-mono-sm text-outline">
+            Built with quiet precision.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="site.js"></script>
+  </body>
 </html>
